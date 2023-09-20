@@ -7,7 +7,9 @@
 }
 
 :root {
-  --dark: ##2d2e32;
+  --dark: #2d2e32;
+  --grey: #f9f9f9;
+  --text: #767676;
 }
 
 body {
@@ -15,6 +17,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+span {
+  color: var(--text);
 }
 
 code {
