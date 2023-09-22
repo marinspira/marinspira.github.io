@@ -40,32 +40,39 @@ function Contact() {
                     <input
                         type='text'
                         name='name'
-                        placeholder='Your name'
+                        placeholder='Name'
                         onChange={handleChange}
+                        maxLength='20'
+                        required
                     />
                     <input
                         type='email'
                         name='email'
-                        placeholder='Your e-mail'
+                        placeholder='E-mail'
                         onChange={handleChange}
+                        required
                     />
                     <input
                         type='text'
                         name='company'
-                        placeholder='Your company'
+                        placeholder='Company'
                         onChange={handleChange}
+                        maxLength='20'
+                        required
                     />
                     <input
                         type='tel'
                         name='tel'
-                        placeholder='Your WhatsApp with your country'
+                        placeholder='WhatsApp with your country'
                         onChange={handleChange}
                         maxLength="15"
+                        required
                     />
                     <textarea
                         name='message'
                         placeholder='Your message'
                         onChange={handleChange}
+                        required
                     />
                     <button type='submit'>Send</button>
                 </C.Form>

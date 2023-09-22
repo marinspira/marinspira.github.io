@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Blog from './pages/Blog';
 import Home from './pages/Home';
+import { PostsProvider } from './contexts/postsContext';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <PostsProvider>
+      <RouterProvider router={router} />
+    </PostsProvider>
   </React.StrictMode>
 );
 

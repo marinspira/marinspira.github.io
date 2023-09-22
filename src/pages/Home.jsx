@@ -1,5 +1,5 @@
 import About from "../components/about";
-import Blog from "../components/blog";
+import Blog from "../components/posts";
 import Contact from "../components/contact";
 import Portfolio from "../components/portfolio";
 import SectionTop from "../components/section-top";
