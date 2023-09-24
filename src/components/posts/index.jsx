@@ -13,7 +13,7 @@ function Blog() {
             <C.Container>
                 <h2>Blog</h2>
                 <ul>
-                    {posts.slice(0, 3).map((post) => (
+                    {posts && posts.slice(0, 3).map((post) => (
                         <C.Post key={post.id}>
                             <label>{post.labels}</label>
                             <C.Title>{post.title}</C.Title>
