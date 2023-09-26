@@ -10,6 +10,7 @@ import {
 import Blog from './pages/Blog';
 import Home from './pages/Home';
 import { PostsProvider } from './contexts/postsContext';
+import Post from './pages/SinglePost';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />
+      },
+      {
+        path: "/blog/:postId",
+        element: <Post />
       }
     ]
   }

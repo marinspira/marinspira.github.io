@@ -18,7 +18,7 @@ function Posts() {
         <C.Container>
             <ul>
                 {posts.map((post) => (
-                    <C.Post key={post.id}>
+                    <C.Post to={`/blog/${post.id}`} key={post.id}>
                         <label>{post.labels}</label>
                         <C.Title>{post.title}</C.Title>
                         <div dangerouslySetInnerHTML={renderHTML(limitText(post.content, 150))} />

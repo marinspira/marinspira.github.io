@@ -14,7 +14,6 @@ export function PostsProvider({ children }) {
                     `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/posts?key=${process.env.REACT_APP_APIKey}`
                 );
                 setPosts(response.data.items);
-                console.log(response.data.items)
             } catch (error) {
                 console.error('Erro ao buscar posts do Blogger:', error);
             }

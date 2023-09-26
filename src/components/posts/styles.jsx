@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -28,7 +29,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Post = styled.li`
+export const Post = styled(Link)`
   background-color: #fff;
   padding: 40px 20px 20px 20px;
   max-width: 310px;
