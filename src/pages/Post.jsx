@@ -8,7 +8,7 @@ function Post({ postId }) {
 
     useEffect(() => {
         axios
-            .get(`https://www.googleapis.com/blogger/v3/blogs/${process.env.blogId}/pages/${postId}?key=${process.env.APIKey}`)
+            .get(`https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/pages/${postId}?key=${process.env.REACT_APP_APIKey}`)
             .then((res) => setPost(res))
             .catch((error) => console.error(error))
     })

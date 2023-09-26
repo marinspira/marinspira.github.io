@@ -11,7 +11,7 @@ export function PostsProvider({ children }) {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://www.googleapis.com/blogger/v3/blogs/${process.env.blogId}/posts?key=${process.env.APIKey}`
+                    `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/posts?key=${process.env.REACT_APP_APIKey}`
                 );
                 setPosts(response.data.items);
                 console.log(response.data.items)
