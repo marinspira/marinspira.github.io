@@ -15,7 +15,7 @@ function Posts() {
     const { posts } = useContext(PostsContext)
 
     return (
-        <div>
+        <C.Container>
             <ul>
                 {posts.map((post) => (
                     <C.Post key={post.id}>
@@ -25,7 +25,7 @@ function Posts() {
                     </C.Post>
                 ))}
             </ul>
-        </div>
+        </C.Container>
     );
 }
 

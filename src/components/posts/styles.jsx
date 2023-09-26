@@ -36,10 +36,11 @@ export const Post = styled.li`
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.049);
   border-radius: 10px;
   position: relative;
-  border-left: 4px solid var(--dark);
+  border-left: 1px solid var(--dark);
+  cursor: pointer;
 
   label {
-    background-color: var(--dark);
+    background: #aa4eff;
     color: #fff;
     font-size: 14px;
     text-overflow: ellipsis;
