@@ -3,7 +3,6 @@ import * as C from './styles';
 import { PostsContext } from '../../contexts/postsContext';
 import { renderHTML } from '../../utils/renderHtml';
 import { limitText } from '../../utils/limitText';
-import { Link } from 'react-router-dom';
 
 function Blog() {
 
@@ -16,7 +15,7 @@ function Blog() {
                 <ul>
                     {posts && posts.slice(0, 3).map((post) => (
                         <C.Post to={`/blog/${post.id}`} key={post.id}>
-                            <label>{post.labels}</label>
+                            {post.labels && <label>{post.labels}</label>}
                             <C.Title>{post.title}</C.Title>
                             <div dangerouslySetInnerHTML={renderHTML(limitText(post.content, 150))} />
                         </C.Post>

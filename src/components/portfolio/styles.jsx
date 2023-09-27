@@ -67,6 +67,10 @@ export const Content = styled.div`
         margin-top: 10px;
     }
 
+    a svg {
+        margin-left: 10px;
+    }
+
     img {
         height: 40px;
     }

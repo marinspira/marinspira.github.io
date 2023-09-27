@@ -1,7 +1,9 @@
 import React from 'react';
 import * as C from './styles'
 import { AiFillGithub, AiOutlineLink } from 'react-icons/ai'
+import { BsGraphUp } from 'react-icons/bs'
 import feedz from '../../assets/feedz.png'
+import nhall from '../../assets/nhall.png'
 
 function Portfolio() {
 
@@ -11,7 +13,14 @@ function Portfolio() {
             name: 'Website: Feedz',
             describe: 'A website developed for the company Feedz, with a focus on easy-to-handle componentization for A/B testing purposes in conversion strategies. The site was built using Next.js.',
             skills: ['styledcomponents, typescript'],
-            url: 'https://marinspira.github.io/app-todo_list/'
+            url: 'https://feedz.com.br',
+            gtmextrix: 'https://gtmetrix.com/reports/www.feedz.com.br/1vJU2lsS/'
+        },
+        {
+            img: nhall,
+            name: 'E-commerce: Nhall',
+            describe: '',
+            skills: ['woocommerce, wordpress'],
         }
     ]
 
@@ -35,7 +44,8 @@ function Portfolio() {
                         <span>{project.describe}</span>
                         <div>
                             {project.github && <a href={project.github}>Code <AiFillGithub /></a>}
-                            <a href={project.url}>Demo <AiOutlineLink /></a>
+                            {project.url && <a href={project.url}>Demo <AiOutlineLink /></a>}
+                            {project.gtmextrix && <a href={project.gtmextrix} rel='noreferrer' target='_blank'>Web Vitals <BsGraphUp /></a>}
                         </div>
                     </C.Content>
                 </C.PostCard>

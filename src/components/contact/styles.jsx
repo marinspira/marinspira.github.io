@@ -52,6 +52,6 @@ export const Form = styled.form`
         font-family: inherit;
         color: white;
         border-radius: 8px;
-
+        cursor: pointer;
     }
 `

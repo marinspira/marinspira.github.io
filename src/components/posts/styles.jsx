@@ -31,7 +31,7 @@ export const Container = styled.div`
 
 export const Post = styled(Link)`
   background-color: #fff;
-  padding: 40px 20px 20px 20px;
+  padding: 20px 20px 80px 20px;
   max-width: 310px;
   overflow: hidden;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.049);
@@ -39,18 +39,18 @@ export const Post = styled(Link)`
   position: relative;
   border-left: 1px solid var(--dark);
   cursor: pointer;
+  color: var(--dark);
 
   label {
     background: #aa4eff;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 1px 15px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 3px;
     position: absolute;
-    left: 0;
-    top: 20px;
+    bottom: 20px;
   }
 
   span {
