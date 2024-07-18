@@ -9,7 +9,7 @@ function Home() {
         <div>
             <SectionTop />
             <Portfolio />
-            <Blog />
+            {/* <Blog /> */}
             <About />
             <Contact />
         </div>

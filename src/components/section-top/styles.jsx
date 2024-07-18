@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   background-color: var(--grey);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 `
 
 export const Container = styled.div`
-  padding: 180px 10px 80px 10px;
-  max-width: 1000px;
+  padding: 180px 0px 80px 0px;
+  width: 90vw;
+  max-width: 1500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
