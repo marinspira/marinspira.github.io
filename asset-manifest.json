@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.68b5a9e0.css",
-    "main.js": "/static/js/main.6459992e.js",
+    "main.js": "/static/js/main.d09acb9c.js",
     "static/js/787.71a3c0ae.chunk.js": "/static/js/787.71a3c0ae.chunk.js",
-    "static/media/feedzday.png": "/static/media/feedzday.ba1906771ce608acd9eb.png",
+    "static/media/feedzday.png": "/static/media/feedzday.b6197f6c5883a5fe21a1.png",
     "static/media/nhall.png": "/static/media/nhall.25439f2e47ef491036b4.png",
+    "static/media/expo.gif": "/static/media/expo.907665b64df0632c1215.gif",
     "static/media/feedz.png": "/static/media/feedz.7fadbb9ea953e296606c.png",
+    "static/media/go.gif": "/static/media/go.3ef68cebf44292cc64ea.gif",
     "static/media/me2.jpg": "/static/media/me2.77b99880efa1328968ae.jpg",
+    "static/media/mockupIphone.png": "/static/media/mockupIphone.6b574d7acd445fc36cee.png",
+    "static/media/notebook.webp": "/static/media/notebook.c99cf877a3bbb2f8b618.webp",
     "index.html": "/index.html",
     "main.68b5a9e0.css.map": "/static/css/main.68b5a9e0.css.map",
-    "main.6459992e.js.map": "/static/js/main.6459992e.js.map",
+    "main.d09acb9c.js.map": "/static/js/main.d09acb9c.js.map",
     "787.71a3c0ae.chunk.js.map": "/static/js/787.71a3c0ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68b5a9e0.css",
-    "static/js/main.6459992e.js"
+    "static/js/main.d09acb9c.js"
   ]
 }
