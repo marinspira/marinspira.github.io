@@ -7,6 +7,11 @@ export const Button = styled.a`
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+
+  .btn-inativo {
+    border-color: #989898 !important;
+    color: #989898 !important;
+}
 `;
 
 export const Button2 = styled.a`
