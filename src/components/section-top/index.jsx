@@ -15,7 +15,7 @@ function SectionTop() {
           </span>
           <Btn
             link1={{
-              text: "Download CV",
+              text: "Go to CV",
               link: 'https://docs.google.com/document/d/1ybjGYqPWcnXZM5sjIoTGbnV0x5HLPwz8Whyr5yYFukU/edit?usp=sharing'
             }}
             link2={{

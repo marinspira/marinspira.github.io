@@ -6,7 +6,7 @@ export default function Btn({ link1, link2 }) {
         <C.Actions>
             {
                 link1.link &&
-                <C.Button href={link1.link}>
+                <C.Button target='_blank' href={link1.link}>
                     {link1?.text}
                 </C.Button>
             }
