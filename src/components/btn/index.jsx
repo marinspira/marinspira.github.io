@@ -12,7 +12,7 @@ export default function Btn({ link1, link2 }) {
             }
             {
                 link2.link &&
-                <C.Button2 href={link2.link}>
+                <C.Button2 target='_blank' href={link2.link}>
                     {link2?.text}
                 </C.Button2>
             }

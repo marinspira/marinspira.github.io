@@ -18,7 +18,9 @@ function Portfolio() {
             describe: 'Website developed for Feedz using Next.js, features easy componentization for A/B testing and conversion strategies. It includes CRM integrations with Axios, custom monitoring tags for personalized data analysis, HR logic calculators, and adaptive content based on user UTM parameters.',
             skills: ['React.js, Next.js'],
             link1: 'https://feedz.com.br',
+            link2: 'https://drive.google.com/file/d/1XOJWncAdvyoGoGa93k7qq2l9a4_Gl5WH/view?usp=sharing',
             textLink1: 'Live',
+            textLink2: 'Performance Report',
             switchCol: true
         },
         {
