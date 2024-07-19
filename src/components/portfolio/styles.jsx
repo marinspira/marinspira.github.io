@@ -19,7 +19,6 @@ export const Container = styled.div`
   @media (max-width: 992px) {
     max-width: 100%;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
   }
 `;
 
@@ -42,6 +41,11 @@ export const PostCard = styled.div`
     span {
         text-align: justify;
     }
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
 `
 
 export const Content = styled.div`
@@ -56,6 +60,10 @@ export const Content = styled.div`
 
     img {
         height: 40px;
+    }
+
+    @media screen and (max-width: 992px) {
+    width: 100%;
     }
 `
 
@@ -105,7 +113,7 @@ export const ContentImage = styled.div`
     justify-content: center;
   
     .main-image {
-      height: auto;
+    height: auto;
     width: 600px;
     position: absolute;
     top: 25px;
@@ -116,27 +124,26 @@ export const ContentImage = styled.div`
     }
 
     .gif {
-      height: 100%;
+    height: 100%;
     width: 100%;
-        /* max-width: 600px; */
     margin: 12px 0 0px 0;
     padding-bottom: 23px;
     object-fit: contain;
     }
 
     .mockup-mobile {
-      position: absolute;
+    position: absolute;
     width: 249px;
     top: 0;
     z-index: 3;
     }
 
     .mockup-desktop {
-      width: 644px;
+    width: 644px;
     z-index: 3;
     position: absolute;
     top: 0;
-      height: 505px;
+    height: 505px;
     }
 
     &:hover .main-image {
@@ -148,6 +155,13 @@ export const ContentImage = styled.div`
 
   &:hover ${HoverInformation} {
     display: none;
-}
+  }
+  
+  @media screen and (max-width: 992px) {
+      width: 100%;
 
+      .main-image {
+        width: 100%;
+      }
+      }
 `

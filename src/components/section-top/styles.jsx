@@ -20,6 +20,7 @@ export const Container = styled.div`
     max-width: 100%;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    padding: 130px 0px 80px 0px;
   }
 `;
 
@@ -33,6 +34,12 @@ export const ImageContainer = styled.div`
     border-radius: 50%;
     height: auto;
     width: 300px;
+  }
+
+  @media (max-width: 992px) {
+    img {
+      width: 150px;
+    }
   }
 `;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding: 80px 10px;
   max-width: 1500px;
-    width: 90vw;
+  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,6 +33,13 @@ export const Container = styled.div`
   @media (max-width: 992px) {
     max-width: 100%;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
+
+    img {
+      width: 100%;
+    }
+
+    div {
+      width: 100%;
+    }
   }
 `;

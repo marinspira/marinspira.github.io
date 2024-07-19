@@ -75,7 +75,7 @@ function Portfolio() {
                                 <img className="main-image" src={project.img} alt={project.name} />
                                 <C.HoverInformation>
                                     <PiHandWaving className='mouse' />
-                                    <span>Hover the image</span>
+                                    <span>Hover here!</span>
                                 </C.HoverInformation>
                             </>
                         }

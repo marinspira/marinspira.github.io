@@ -23,8 +23,6 @@ export const Container = styled.div`
 
   @media (max-width: 992px) {
     max-width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
   }
 `;
 
@@ -54,4 +52,8 @@ export const Form = styled.form`
         border-radius: 3px;
         cursor: pointer;
     }
+
+    @media (max-width: 992px) {
+    max-width: 100%;
+  }
 `
