@@ -5,7 +5,7 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
-  padding: 100px 10px;
+  padding: 100px 30px;
   max-width: 1000px;
   display: flex;
   flex-direction: column;

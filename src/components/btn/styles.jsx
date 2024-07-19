@@ -17,7 +17,7 @@ export const Button = styled.a`
 
 export const Button2 = styled.a`
   background-color: #000;
-  padding: 10px 20px;
+  padding: 13px 20px;
   border-radius: 5px;
   font-size: 16px;
   color: #fff;
