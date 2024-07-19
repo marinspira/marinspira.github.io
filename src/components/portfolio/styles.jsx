@@ -45,6 +45,7 @@ export const PostCard = styled.div`
     @media screen and (max-width: 992px) {
       flex-direction: column;
       padding: 40px 20px;
+      height: auto;
     }
 `
 
@@ -158,10 +159,15 @@ export const ContentImage = styled.div`
   }
   
   @media screen and (max-width: 992px) {
-      width: 100%;
+    width: 100%;
+    min-height: 400px;
 
-      .main-image {
-        width: 100%;
-      }
-      }
+    .gif {
+      height: 500px;
+    }
+
+    .main-image {
+      width: 100%;
+    }
+  }
 `
