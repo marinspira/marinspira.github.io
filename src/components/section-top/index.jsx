@@ -15,23 +15,18 @@ function SectionTop() {
           </span>
           <Btn
             link1={{
-              text: "Download CV"
+              text: "Download CV",
+              link: 'https://docs.google.com/document/d/1ybjGYqPWcnXZM5sjIoTGbnV0x5HLPwz8Whyr5yYFukU/edit?usp=sharing'
             }}
             link2={{
-              text: "Contact"
+              text: "Contact",
+              link: '#contact'
             }}
           />
         </C.Content>
         <C.ImageContainer>
           <img src={me} alt='Maria Eduarda' />
         </C.ImageContainer>
-        {/* *<div>
-                <img src='https://skillicons.dev/icons?i=html,css' alt='html e css' />
-                <img src='https://skillicons.dev/icons?i=javascript,typescript' alt='javascript e typescript' />
-                <img src='https://skillicons.dev/icons?i=react,next,vue' alt='react, next e vue' />
-                <img src='https://skillicons.dev/icons?i=figma,styledcomponents' alt='figma, styledcomponents' />
-                <img src='https://skillicons.dev/icons?i=git' alt='git' />
-    </div>* */}
       </C.Container>
     </C.Section>
   );

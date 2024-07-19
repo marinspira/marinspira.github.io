@@ -101,23 +101,42 @@ export const ContentImage = styled.div`
     width: 55%;
     position: relative;
     transition: 1s;
+    display: flex;
+    justify-content: center;
   
     .main-image {
-        height: auto;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        filter: brightness(0.3);
-        left: 0;
-        transition: transform 0.5s;
-        transform: translateY(0);
+      height: auto;
+    width: 600px;
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    filter: brightness(0.3);
+    transition: transform 0.5s;
+    transform: translateY(0);
     }
 
     .gif {
       height: 100%;
-      width: 100%;
-      object-fit: contain;
+    width: 100%;
+        /* max-width: 600px; */
+    margin: 12px 0 0px 0;
+    padding-bottom: 23px;
+    object-fit: contain;
+    }
+
+    .mockup-mobile {
+      position: absolute;
+    width: 249px;
+    top: 0;
+    z-index: 3;
+    }
+
+    .mockup-desktop {
+      width: 644px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+      height: 505px;
     }
 
     &:hover .main-image {
