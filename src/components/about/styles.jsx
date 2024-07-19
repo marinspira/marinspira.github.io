@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 80px 10px;
-  max-width: 1000px;
+  max-width: 1500px;
+    width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,8 +13,8 @@ export const Container = styled.div`
   img {
     border-radius: 10px;
     width: auto;
-    height: 300px;
-    object-fit: cover;
+    height: 550px;
+    object-fit: contain;
   }
 
   div {
@@ -21,6 +22,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
   }
 
   h2 {

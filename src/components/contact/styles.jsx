@@ -5,14 +5,14 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
-  padding: 80px 10px;
+  padding: 100px 10px;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  gap: 30px;
+  gap: 60px;
   
   ul {
     display: flex;
@@ -31,16 +31,16 @@ export const Container = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 550px;
 
     input, textarea {
         width: 100%;
         margin-bottom: 8px;
-        border: 1px solid #c4c4c4;
+        border: 1px solid #eaeaea;
         background-color: white;
         padding: 10px;
         font-size: 16px;
-        border-radius: 8px;
+        border-radius: 3px;
         font-family: inherit;
     }
 
@@ -51,7 +51,7 @@ export const Form = styled.form`
         font-size: 16px;
         font-family: inherit;
         color: white;
-        border-radius: 8px;
+        border-radius: 3px;
         cursor: pointer;
     }
 `

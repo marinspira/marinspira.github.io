@@ -35,7 +35,7 @@ function Contact() {
     return (
         <C.Section id="contact">
             <C.Container>
-                <h2>Contact</h2>
+                <h2>// Let's talk?</h2>
                 <C.Form onSubmit={handleSubmit}>
                     <input
                         type='text'
