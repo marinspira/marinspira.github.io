@@ -35,3 +35,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.whatsapp {
+  position: fixed;
+  background-color: #25d366;
+  padding: 18px;
+  border-radius: 100%;
+  bottom: 5vh;
+  right: 20px;
+  color: #fff;
+}
+
+.whatsapp svg {
+  font-size: 35px;
+}
