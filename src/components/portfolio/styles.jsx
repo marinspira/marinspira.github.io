@@ -59,6 +59,11 @@ export const Content = styled.div`
     position: relative;
     gap: 25px;
 
+    .date {
+      margin-bottom: -18px;
+      font-size: 16px;
+    }
+
     img {
         height: 40px;
     }
