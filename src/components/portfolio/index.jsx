@@ -7,7 +7,6 @@ import expo from '../../assets/expo.gif'
 import Btn from '../btn';
 import { PiHandWaving } from "react-icons/pi";
 import iphone from '../../assets/mockupIphone.png'
-import notebook from '../../assets/notebook.webp'
 
 function Portfolio() {
 
@@ -50,7 +49,7 @@ function Portfolio() {
             img: go,
             name: 'Dashboard with Next.js and Typescript',
             describe: 'Created with Next.js, this site adheres closely to Figma designs to ensure a visually consistent and engaging event experience. It integrates seamlessly with a CRM API for efficient attendee management and personalized communication.',
-            skills: ['react,typescript'],
+            skills: ['react,next,typescript'],
             gif: true,
             switchCol: true
         },
