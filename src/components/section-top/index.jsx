@@ -1,7 +1,6 @@
 import React from 'react';
-import me from '../../assets/me2.jpg';
+import me from '../../assets/me.jpeg';
 import * as C from './styles'
-import { AiOutlineGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
 import Btn from '../btn';
 
 function SectionTop() {
@@ -19,8 +18,8 @@ function SectionTop() {
               link: 'https://drive.google.com/file/d/1FAURrCgId0ld5Knlgt0UTIqzwlLsfz22/view?usp=sharing'
             }}
             link2={{
-              text: "Contact",
-              link: '#contact'
+              text: "LinkedIn",
+              link: 'https://www.linkedin.com/in/iamaria/'
             }}
           />
         </C.Content>

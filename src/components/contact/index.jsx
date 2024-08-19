@@ -60,14 +60,6 @@ function Contact() {
                         maxLength='20'
                         required
                     />
-                    <input
-                        type='tel'
-                        name='tel'
-                        placeholder='WhatsApp with your country'
-                        onChange={handleChange}
-                        maxLength="15"
-                        required
-                    />
                     <textarea
                         name='message'
                         placeholder='Your message'
