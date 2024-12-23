@@ -31,18 +31,6 @@ function Portfolio() {
             date: 'October, 2022'
         },
         {
-            img: expo,
-            name: 'React Native App with Express and MongoDB',
-            describe: 'Personal project guest check-in application developed in React Native using Expo, with a backend built on Express.js. Schemas and simple methods were created to securely send data to MongoDB. A secure tunnel was configured behind NATs and firewalls using Ngrok for testing on other devices. Libraries such as react-native-image-picker were used for native interaction with the user gallery, and the backend was responsible for saving and modifying images in the database as base64. State management with React Context, and secure authentication with JWT and bcrypt.',
-            skills: ['react,nodejs,express,mongodb'],
-            link1: 'https://github.com/marinspira/checkinApp',
-            textLink1: 'Repository',
-            switchCol: true,
-            gif: true,
-            device: 'mobile',
-            date: 'May, 2024'
-        },
-        {
             img: feedzday,
             name: 'Next.js Website',
             describe: 'Developed with a focus on performance for high-quality paid traffic, this event website was meticulously created following a Figma prototype by a designer. It features integrations with CRMs like RD Station using Axios.',
