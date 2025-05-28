@@ -32,8 +32,9 @@ export const ImageContainer = styled.div`
   img {
     border: 3px solid #2d2e32;
     border-radius: 50%;
-    height: auto;
-    width: 300px;
+    height: 350px;
+    width: 350px;
+    object-fit: cover
   }
 
   @media (max-width: 992px) {

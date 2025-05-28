@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../../assets/me.jpeg';
+import me from '../../assets/me3.jpg';
 import * as C from './styles'
 import Btn from '../btn';
 
@@ -15,7 +15,7 @@ function SectionTop() {
           <Btn
             link1={{
               text: "Go to CV",
-              link: 'https://drive.google.com/file/d/1FAURrCgId0ld5Knlgt0UTIqzwlLsfz22/view?usp=sharing'
+              link: 'https://drive.google.com/file/d/13YNT2d6fqGo8_jVNfkqooJz_oJFiM2-u/view?usp=sharing'
             }}
             link2={{
               text: "LinkedIn",

@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
-      <a href="https://wa.link/aatq40" className="whatsapp">
+      <a href="https://w.app/moyj1l" className="whatsapp">
         <FaWhatsapp />
       </a>
     </div>
