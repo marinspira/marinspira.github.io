@@ -102,7 +102,7 @@ function Portfolio() {
         },
         {
             img: go,
-            name: 'Dashboard with Next.js and Typescript',
+            name: 'Dashboard with React and Typescript',
             list: [
                 "🧩 <b>UI:</b> Built modular and reusable components with React 17 and TypeScript, following a Figma prototype.",
                 "⚙️ <b>Backend:</b> Integrated with an existing Express API using Axios for secure and efficient data handling.",
