@@ -9,7 +9,7 @@
 :root {
   --dark: #2d2e32;
   --grey: #f9f9f9;
-  --text: #767676;
+  --text: #474747;
   --white: #fff;
 }
 
@@ -27,8 +27,8 @@ h2 {
 
 span {
   color: var(--text);
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 code {

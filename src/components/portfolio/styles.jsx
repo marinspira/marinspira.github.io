@@ -22,7 +22,20 @@ export const Container = styled.div`
   }
 `;
 
+export const Description = styled.span`
+  
+`
+
+export const List = styled.ul`
+  margin-bottom: 10px;
+`
+
+export const Item = styled.li`
+  margin-bottom: 10px;
+`
+
 export const PostCard = styled.div`
+    width: 100%;
     border-radius: 10px;
     display: flex;
     gap: 40px;
@@ -50,14 +63,14 @@ export const PostCard = styled.div`
 `
 
 export const Content = styled.div`
-    width: 45%;
+    width: 50%;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    gap: 25px;
+    gap: 15px;
 
     .date {
       margin-bottom: -18px;

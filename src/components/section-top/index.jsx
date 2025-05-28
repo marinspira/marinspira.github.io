@@ -9,17 +9,17 @@ function SectionTop() {
       <C.Container>
         <C.Content>
           <h1>Hi! I am Maria, 👋<br />FullStack Developer.</h1>
-          <span>
+          {/* <span>
             I develop software for web and mobile using with React.js, React Native, Next.js, Node.js, Express.js, and MongoDB.
-          </span>
+          </span> */}
           <Btn
             link1={{
               text: "Go to CV",
-              link: 'https://drive.google.com/file/d/13YNT2d6fqGo8_jVNfkqooJz_oJFiM2-u/view?usp=sharing'
+              link: 'https://drive.google.com/file/d/1FAURrCgId0ld5Knlgt0UTIqzwlLsfz22/view?usp=sharing'
             }}
             link2={{
-              text: "LinkedIn",
-              link: 'https://www.linkedin.com/in/iamaria/'
+              text: "GitHub",
+              link: 'https://github.com/marinspira'
             }}
           />
         </C.Content>
