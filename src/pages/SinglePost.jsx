@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 150px 10px;
-  max-width: 1000px;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,6 +36,19 @@ function Post() {
     const [singlePost, setSinglePost] = useState(null);
     const { postId } = useParams();
 
+    function removeFirstImage(htmlString) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlString, 'text/html');
+        const firstImg = doc.querySelector('img');
+    
+        if (firstImg) {
+            firstImg.remove();
+        }
+    
+        return doc.body.innerHTML;
+    }
+    
+
     useEffect(() => {
         axios
             .get(`https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/posts/${postId}?key=${process.env.REACT_APP_APIKey}`)
@@ -50,7 +63,7 @@ function Post() {
             {singlePost ? (
                 <div>
                     <h2>{singlePost.title}</h2>
-                    <PostContent dangerouslySetInnerHTML={renderHTML(singlePost.content)} />
+                    <PostContent dangerouslySetInnerHTML={{ __html: removeFirstImage(singlePost.content) }} />
                 </div>
             ) : (
                 <p>Carregando...</p>

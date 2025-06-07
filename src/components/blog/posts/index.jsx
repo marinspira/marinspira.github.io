@@ -7,8 +7,7 @@ import * as C from '../../posts/styles'
 import { PostsContext } from '../../../contexts/postsContext';
 
 // utils
-import { renderHTML } from '../../../utils/renderHtml';
-import { limitText } from '../../../utils/limitText';
+import Post from '../../post';
 
 function Posts() {
 
@@ -18,11 +17,7 @@ function Posts() {
         <C.Container>
             <ul>
                 {posts.map((post) => (
-                    <C.Post to={`/blog/${post.id}`} key={post.id}>
-                        <label>{post.labels}</label>
-                        <C.Title>{post.title}</C.Title>
-                        <div dangerouslySetInnerHTML={renderHTML(limitText(post.content, 150))} />
-                    </C.Post>
+                    <Post post={post} />
                 ))}
             </ul>
         </C.Container>
