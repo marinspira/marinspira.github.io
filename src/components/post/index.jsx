@@ -15,7 +15,6 @@ function Post({ post }) {
         if (img) {
             mainImage = img.src;
 
-            // Se a imagem está dentro de um <a> (como é o caso do Blogger)
             const parent = img.closest('a, .separator, div');
             if (parent) {
                 parent.remove();

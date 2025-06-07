@@ -66,7 +66,7 @@ function Post() {
                     <PostContent dangerouslySetInnerHTML={{ __html: removeFirstImage(singlePost.content) }} />
                 </div>
             ) : (
-                <p>Carregando...</p>
+                <p>Loading...</p>
             )}
         </Container>
     );
