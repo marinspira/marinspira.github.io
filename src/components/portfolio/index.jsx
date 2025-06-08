@@ -13,6 +13,7 @@ import expo from '../../assets/expo.gif'
 import Btn from '../btn';
 import { PiHandWaving } from "react-icons/pi";
 import iphone from '../../assets/mockupIphone.png'
+import { useEffect, useRef, useState } from 'react'
 
 function Portfolio() {
 
@@ -28,9 +29,9 @@ function Portfolio() {
                 "🔗 <b>Integrations:</b> RESTful APIs using Axios for CRMs and GA4.",
                 "🔐 <b>Backend:</b> Using serverless API routes from Next.js, ensuring secure server-side execution for Google Cloud Plataform APIs.",
                 "🎯<b>SEO:</b> Used UTM parameters to dynamically render content, enhancing SEO and user targeting.",
-                "👥 <b>Team:</b> Worked collaboratively with a multidisciplinary team, development workflow followed Scrum methodology with CD/CI via Bitbucket.",
             ],
-            date: 'April, 2023'
+            date: 'April, 2023',
+            category: 'fullstack',
         },
         {
             img: nhall,
@@ -39,10 +40,10 @@ function Portfolio() {
                 "🧩 <b>UI:</b> Built with React 17, using React Router, Redux, Axios and Styled Components; no prototype used, based on user research.",
                 "🔗 <b>Integrations:</b> Shopify Storefront API and Axios for product, order, and payment flows.",
                 "🔐 <b>Backend:</b> Created a Node.js Express server to securely handle sensitive operations (storing tokens, custom logic) and proxy API calls.",
-                "📱 <b>Responsiveness:</b> Ensured mobile-first design for optimized shopping experience across devices.",
             ],
             skills: ['react,expressjs,nodejs,redux'],
-            date: 'October, 2022'
+            date: 'October, 2022',
+            category: 'fullstack',
         },
         {
             img: dlifestyle,
@@ -51,10 +52,10 @@ function Portfolio() {
                 "🧩 <b>UI:</b> Built with React 17, using React Router and Redux; no prototype used, based on user research.",
                 "🔗 <b>Integrations:</b> Shopify Storefront API and Axios for product, order, and payment flows.",
                 "🔐 <b>Backend:</b> Created a Node.js Express server to securely handle sensitive operations (storing tokens, custom logic) and proxy API calls.",
-                "📱 <b>Responsiveness:</b> Ensured mobile-first design for optimized shopping experience across devices.",
             ],
             skills: ['react,expressjs,nodejs,redux'],
-            date: 'March, 2022'
+            date: 'March, 2022',
+            category: 'fullstack',
         },
         {
             img: feedzday,
@@ -65,7 +66,8 @@ function Portfolio() {
                 "🎯 <b>SEO:</b> Optimized for high-traffic paid media campaigns and used Next.js static optimization features.",
             ],
             skills: ['react,nextjs,figma'],
-            date: 'August, 2023'
+            date: 'August, 2023',
+            category: 'fullstack',
         },
         {
             img: brisa,
@@ -76,7 +78,8 @@ function Portfolio() {
                 "🎯 <b>SEO:</b> Used Next.js static optimization features.",
             ],
             skills: ['react,nextjs'],
-            date: 'January, 2021'
+            date: 'January, 2021',
+            category: 'front',
         },
         {
             img: novus,
@@ -87,7 +90,8 @@ function Portfolio() {
                 "🎯 <b>SEO:</b> Optimized for high-traffic paid media campaigns and used Next.js static optimization features.",
             ],
             skills: ['react,nextjs'],
-            date: 'April, 2022'
+            date: 'April, 2022',
+            category: 'front',
         },
         {
             img: priddat,
@@ -98,7 +102,8 @@ function Portfolio() {
                 "🛠️ <b>Backend:</b> Used custom Express.js middleware to securely proxy WooCommerce API keys and handle server-side operations.",
             ],
             skills: ['react,nextjs,wordpress'],
-            date: 'November, 2021'
+            date: 'November, 2021',
+            category: 'front',
         },
         {
             img: go,
@@ -107,68 +112,129 @@ function Portfolio() {
                 "🧩 <b>UI:</b> Built modular and reusable components with React 17 and TypeScript, following a Figma prototype.",
                 "⚙️ <b>Backend:</b> Integrated with an existing Express API using Axios for secure and efficient data handling.",
                 "🧠 <b>State Management:</b> Implemented Redux for predictable and optimized state flow across the application.",
-              ],
+            ],
             skills: ['react,next,typescript,redux'],
             gif: true,
-            date: 'May, 2023'
+            date: 'May, 2023',
+            category: 'front',
         },
     ]
 
+    const categories = ['fullstack', 'back', 'devops', 'front']
+
+    const [selectedCategory, setSelectedCategory] = useState('fullstack')
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [isPaused, setIsPaused] = useState(false)
+
+    const intervalRef = useRef(null)
+
+    const filteredProjects = projects.filter(p => p.category === selectedCategory)
+
+    useEffect(() => {
+        if (!isPaused) {
+            intervalRef.current = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredProjects.length)
+            }, 8000)
+        }
+    
+        return () => clearInterval(intervalRef.current)
+    }, [filteredProjects.length, isPaused])
+    
+
+    useEffect(() => {
+        setCurrentIndex(0)
+    }, [selectedCategory])
+
     return (
         <C.Container id='projects'>
-            <h2>// Portfolio</h2>
-            {projects.map((project) => (
-                <C.PostCard key={project.name} switchCol={project.switchCol}>
-                    <C.ContentImage>
-                        {project.device === 'mobile' &&
-                            <img className='mockup-mobile'
-                                src={iphone}
-                                alt='Mockup'
-                            />
-                        }
-                        {project.gif ?
-                            <img className='gif' src={project.img} alt={project.name} />
-                            :
-                            <>
-                                <img className="main-image" src={project.img} alt={project.name} />
-                                <C.HoverInformation>
-                                    <PiHandWaving className='mouse' />
-                                    <span>Hover here!</span>
-                                </C.HoverInformation>
-                            </>
-                        }
-                    </C.ContentImage>
-                    <C.Content>
-                        <span className='date'>{project.date}</span>
-                        <h3>{project.name}</h3>
-                        {(project.skills).map((skill) => {
-                            return <img src={`https://skillicons.dev/icons?i=${skill}`} alt={skill} />
-                        })}
-                        <C.Description>{project.describe}</C.Description>
-                        <C.List>
-                            {project.list && project.list.map((item, index) => (
-                                <C.Item key={index}>
-                                    <span dangerouslySetInnerHTML={{ __html: item }} />
-                                </C.Item>
+
+            <C.Wrapper>
+                <h2>Projects I have done</h2>
+                <C.Tabs>
+                    {categories.map((cat) => (
+                        <C.Tab
+                            key={cat}
+                            onClick={() => setSelectedCategory(cat)}
+                            className={cat === selectedCategory ? 'active' : ''}
+                        >
+                            {cat.toUpperCase()}
+                        </C.Tab>
+                    ))}
+                </C.Tabs>
+
+                <C.PaginationDots>
+                    {filteredProjects.map((_, idx) => (
+                        <C.Dot
+                            key={idx}
+                            className={idx === currentIndex ? 'dot active' : 'dot'}
+                            onClick={() => setCurrentIndex(idx)}
+                        />
+                    ))}
+                </C.PaginationDots>
+
+                {filteredProjects.length > 0 && (
+                    <C.PostCard key={filteredProjects[currentIndex].name} className="fade">
+                        <C.ContentImage
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
+                        >¯
+                            {filteredProjects[currentIndex].gif ? (
+                                <img
+                                    className="gif"
+                                    src={filteredProjects[currentIndex].img}
+                                    alt={filteredProjects[currentIndex].name}
+                                />
+                            ) : (
+                                <>
+                                    <img
+                                        className="main-image"
+                                        src={filteredProjects[currentIndex].img}
+                                        alt={filteredProjects[currentIndex].name}
+                                    />
+                                    <C.HoverInformation>
+                                        <PiHandWaving className="mouse" />
+                                        <span>Hover here!</span>
+                                    </C.HoverInformation>
+                                </>
+                            )}
+                        </C.ContentImage>
+                        <C.Content>
+                            <span className="date">{filteredProjects[currentIndex].date}</span>
+                            <h3>{filteredProjects[currentIndex].name}</h3>
+                            {filteredProjects[currentIndex].skills.map((skill) => (
+                                <img
+                                    key={skill}
+                                    src={`https://skillicons.dev/icons?i=${skill}`}
+                                    alt={skill}
+                                />
                             ))}
-                        </C.List>
-                        {project.link1 &&
-                            <Btn
-                                link1={{
-                                    text: project.textLink1,
-                                    link: project.link1
-                                }}
-                                link2={{
-                                    text: project.textLink2,
-                                    link: project.link2
-                                }}
-                            />
-                        }
-                    </C.Content>
-                </C.PostCard>
-            ))}
+                            <C.Description>{filteredProjects[currentIndex].describe}</C.Description>
+                            <C.List>
+                                {filteredProjects[currentIndex].list?.map((item, index) => (
+                                    <C.Item key={index}>
+                                        <span dangerouslySetInnerHTML={{ __html: item }} />
+                                    </C.Item>
+                                ))}
+                            </C.List>
+                            {filteredProjects[currentIndex].link1 && (
+                                <Btn
+                                    link1={{
+                                        text: filteredProjects[currentIndex].textLink1,
+                                        link: filteredProjects[currentIndex].link1,
+                                    }}
+                                    link2={{
+                                        text: filteredProjects[currentIndex].textLink2,
+                                        link: filteredProjects[currentIndex].link2,
+                                    }}
+                                />
+                            )}
+                        </C.Content>
+                    </C.PostCard>
+                )}
+            </C.Wrapper>
+
         </C.Container>
-    );
+    )
 }
 
 export default Portfolio;

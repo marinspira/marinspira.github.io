@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Post = styled(Link)`
   background-color: #fff;
-  padding: 20px 20px 80px 20px;
+  padding: 20px 20px 40px 20px;
   max-width: 400px;
   overflow: hidden;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.049);

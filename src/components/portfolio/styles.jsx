@@ -26,6 +26,74 @@ export const Description = styled.span`
   
 `
 
+export const Tabs = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const Tab = styled.button`
+  border: 2px solid;
+  border-color: #000;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+
+  &.active {
+    background-color: #000;
+    color: #fff;
+  }
+`;
+
+export const TabButton = styled.button`
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &.active {
+    background: #0070f3;
+    color: white;
+  }
+`;
+
+export const PaginationDots = styled.div`
+  margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    width: 100%;
+`;
+
+export const Dot = styled.div`
+  flex: 1;
+  height: 3px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &.active {
+    background-color: #000;
+  }
+`;
+
 export const List = styled.ul`
   margin-bottom: 10px;
 `
@@ -40,10 +108,10 @@ export const PostCard = styled.div`
     display: flex;
     gap: 40px;
     background-color: var(--grey);
-    padding: 50px;
+    padding: 20px;
     margin-bottom: 50px;
     box-shadow: 1px 3px 7px 5px rgba(0, 0, 0, 0.049);
-    height: 600px;
+    height: 500px;
     border-radius: 10px;
     flex-direction: ${props => props.switchCol ? 'row-reverse' : 'row'};
 
@@ -54,6 +122,22 @@ export const PostCard = styled.div`
     span {
         text-align: justify;
     }
+
+    &.fade {
+    animation: fadeInUp 0.4s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
