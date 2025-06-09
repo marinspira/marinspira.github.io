@@ -18,7 +18,7 @@ root.render(
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="blog/:postId" element={<Post />} />
+            <Route path="blog/:slug" element={<Post />} />
           </Route>
         </Routes>
       </HashRouter>

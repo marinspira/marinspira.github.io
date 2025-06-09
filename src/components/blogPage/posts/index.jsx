@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 
 // assets
-import * as C from '../../posts/styles'
+import * as C from '../../../sections/sectionPostCards/styles'
 
 // contexts
 import { PostsContext } from '../../../contexts/postsContext';
 
 // utils
-import Post from '../../post';
+import Post from '../../postCardItem';
 
 function Posts() {
 
@@ -16,8 +16,8 @@ function Posts() {
     return (
         <C.Container>
             <ul>
-                {posts.map((post) => (
-                    <Post post={post} />
+                {posts.map((post, index) => (
+                    <Post key={index} post={post} />
                 ))}
             </ul>
         </C.Container>

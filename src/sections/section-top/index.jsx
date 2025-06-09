@@ -1,7 +1,7 @@
 import React from 'react';
 import me from '../../assets/me3.jpg';
 import * as C from './styles'
-import Btn from '../btn';
+import Btn from '../../components/btn';
 
 function SectionTop() {
   return (

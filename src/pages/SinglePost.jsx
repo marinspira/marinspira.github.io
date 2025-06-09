@@ -1,9 +1,10 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { renderHTML } from '../utils/renderHtml';
 
 import styled from 'styled-components';
+import { PostsContext } from '../contexts/postsContext';
 
 const Container = styled.div`
   padding: 150px 10px;
@@ -32,31 +33,25 @@ blockquote {
   }
 `
 
-function Post() {
-    const [singlePost, setSinglePost] = useState(null);
-    const { postId } = useParams();
+function removeFirstImage(htmlString) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, 'text/html');
+    const firstImg = doc.querySelector('img');
 
-    function removeFirstImage(htmlString) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlString, 'text/html');
-        const firstImg = doc.querySelector('img');
-    
-        if (firstImg) {
-            firstImg.remove();
-        }
-    
-        return doc.body.innerHTML;
+    if (firstImg) {
+        firstImg.remove();
     }
-    
 
-    useEffect(() => {
-        axios
-            .get(`https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/posts/${postId}?key=${process.env.REACT_APP_APIKey}`)
-            .then((res) => {
-                setSinglePost(res.data);
-            })
-            .catch((error) => console.error(error));
-    }, [postId]);
+    return doc.body.innerHTML;
+}
+
+function Post() {
+    const { slug } = useParams();
+    const { posts } = useContext(PostsContext);
+
+    const singlePost = posts.find((p) => p.slug === slug);
+
+    if (!singlePost) return <p>Loading...</p>;
 
     return (
         <Container>

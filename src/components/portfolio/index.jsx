@@ -132,6 +132,7 @@ function Portfolio() {
             link1: 'https://github.com/marinspira/microservices-java/blob/main/.github/workflows/ci.yml',
             textLink1: 'Go to .yml file',
             date: 'May, 2025',
+            gif: true,
         },
         {
             img: "https://storage.googleapis.com/support-kms-prod/dCVdVst3A3cmbTkiGoxcUJZq0orhKw4LPDeH",
@@ -145,6 +146,7 @@ function Portfolio() {
               "📱 <b>Google Play:</b> Submitted Android App Bundles (.aab) directly to the internal testing track with versioning and draft release status."
             ],
             date: 'May, 2025',
+            gif: true,
           }
     ]
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Search from '../components/blog/search';
-import Posts from '../components/blog/posts';
+import Search from '../components/blogPage/search';
+import Posts from '../components/blogPage/posts';
 
 function Blog() {
     return (

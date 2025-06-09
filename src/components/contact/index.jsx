@@ -27,6 +27,13 @@ function Contact() {
         emailjs.send('service_2urrqrc', 'template_suatufk', form, '20dfEujDnZV2M9j5s')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                setForm({
+                    name: '',
+                    email: '',
+                    company: '',
+                    tel: '',
+                    message: '',
+                })
             }, function (error) {
                 console.log('FAILED...', error);
             });
@@ -35,7 +42,7 @@ function Contact() {
     return (
         <C.Section id="contact">
             <C.Container>
-                <h2>// Let's talk?</h2>
+                <h2>Let's talk?</h2>
                 <C.Form onSubmit={handleSubmit}>
                     <input
                         type='text'

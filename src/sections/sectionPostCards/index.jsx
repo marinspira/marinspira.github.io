@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import * as C from './styles';
 import { PostsContext } from '../../contexts/postsContext';
-import Post from '../post';
+import Post from '../../components/postCardItem';
 
 function Blog() {
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { slugify } from "../utils/slogify";
 
 export const PostsContext = createContext()
 
@@ -13,7 +14,14 @@ export function PostsProvider({ children }) {
                 const response = await axios.get(
                     `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_blogId}/posts?key=${process.env.REACT_APP_APIKey}`
                 );
-                setPosts(response.data.items);
+
+                const enrichedPosts = response.data.items.map(post => ({
+                    ...post,
+                    slug: slugify(post.title),
+                }));
+
+                setPosts(enrichedPosts);
+
             } catch (error) {
                 console.error('Erro ao buscar posts do Blogger:', error);
             }
