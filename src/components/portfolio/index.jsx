@@ -67,7 +67,7 @@ function Portfolio() {
             ],
             skills: ['react,nextjs,figma'],
             date: 'August, 2023',
-            category: 'fullstack',
+            category: 'frontend',
         },
         {
             img: brisa,
@@ -79,7 +79,7 @@ function Portfolio() {
             ],
             skills: ['react,nextjs'],
             date: 'January, 2021',
-            category: 'front',
+            category: 'frontend',
         },
         {
             img: novus,
@@ -91,7 +91,7 @@ function Portfolio() {
             ],
             skills: ['react,nextjs'],
             date: 'April, 2022',
-            category: 'front',
+            category: 'frontend',
         },
         {
             img: priddat,
@@ -103,7 +103,7 @@ function Portfolio() {
             ],
             skills: ['react,nextjs,wordpress'],
             date: 'November, 2021',
-            category: 'front',
+            category: 'frontend',
         },
         {
             img: go,
@@ -116,7 +116,7 @@ function Portfolio() {
             skills: ['react,next,typescript,redux'],
             gif: true,
             date: 'May, 2023',
-            category: 'front',
+            category: 'frontend',
         },
         {
             img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9bdkUzEXmbaOi-3wtMMLjGcjcq3_5fgtHlc10r_WOgWSaFCsvY4BhSwXWbA7L9oyxKZ7WZs9qs-yOi7dJK2RcIfABnEeK_fs5NnYTpXCnD8NvvdRjM9cv_PPYlAGN1dp8W6Wz6OVqa4rEbpGrBzmEKEbtNQP6PQket-TSnMpqwjVKW5Wdkubl6EN-nJY/w640-h360/image.png",
@@ -128,7 +128,7 @@ function Portfolio() {
                 "🚀 <b>Deployment:</b> Used <b>Azure Container Apps (ACA)</b> to deploy microservices.",
                 "🔐 <b>CI/CD:</b> Built a GitHub pipeline to automate build, Docker image publishing to Docker Hub, and ACA deployment using service principals and secrets.",
                 "📦 <b>Multi-service Pipeline:</b> Implemented matrix-based workflow to deploy multiple services with shared configurations and dynamic ports.",
-              ],
+            ],
             link1: 'https://github.com/marinspira/microservices-java/blob/main/.github/workflows/ci.yml',
             textLink1: 'Go to .yml file',
             date: 'May, 2025',
@@ -139,18 +139,32 @@ function Portfolio() {
             name: "React Native CI/CD with Expo & Google Play",
             category: "devops",
             list: [
-              "🛠 <b>EAS Config:</b> Defined <code>eas.json</code> with structured build and submit profiles for development, preview, and production environments.",
-              "⚙️ <b>CI/CD Pipeline:</b> Automated builds with EAS Build and deploys to Google Play using GitHub Actions and EAS CLI for seamless mobile delivery.",
-              "🔐 <b>Secrets & Environments:</b> Managed all credentials (Expo token, service account JSON, env files) using GitHub Secrets and environment-based configs.",
-              "☁️ <b>GCP Integration:</b> Configured a Google Cloud service account with Play Console access to authenticate and submit apps via CI workflow.",
-              "📱 <b>Google Play:</b> Submitted Android App Bundles (.aab) directly to the internal testing track with versioning and draft release status."
+                "🛠 <b>EAS Config:</b> Defined eas.json with structured build and submit profiles for development, preview, and production environments.",
+                "⚙️ <b>CI/CD Pipeline:</b> Automated builds with EAS Build and deploys to Google Play using GitHub Actions and EAS CLI for seamless mobile delivery.",
+                "🔐 <b>Secrets & Environments:</b> Managed all credentials (Expo token, service account JSON, env files) using GitHub Secrets and environment-based configs.",
+                "☁️ <b>GCP Integration:</b> Configured a Google Cloud service account with Play Console access to authenticate and submit apps via CI workflow.",
+                "📱 <b>Google Play:</b> Submitted Android App Bundles (.aab) directly to the internal testing track with versioning and draft release status."
             ],
             date: 'May, 2025',
             gif: true,
-          }
+        },
+        {
+            img: "https://cdn-icons-png.flaticon.com/512/235/235861.png",
+            name: "React Native Expo Application",
+            category: "mobile",
+            list: [
+                "📲 <b>Mobile-first Stack:</b> Fully developed from scratch using React Native and Expo SDK 52 for the frontend and Express.js with MongoDB for the backend.",
+                "💻 <b>Simulated Environments:</b> Testing experience using Android Studio Emulator and Xcode iOS Simulator for cross-platform validation/debugging.",
+                "🌐 <b>Local-to-Cloud Integration:</b> Tunneled local backend servers using Ngrok to expose APIs for mobile testing on physical devices.",
+                "💬 <b>Real-time Features:</b> Implemented real-time features using WebSocket.",
+                "🚀 <b>CI/CD:</b> Automated builds with EAS, GitHub Actions and Google Play."
+            ],
+            date: "June, 2024",
+            gif: true
+        }
     ]
 
-    const categories = ['fullstack', 'back', 'devops', 'front']
+    const categories = ['fullstack', 'mobile', 'devops', 'frontend']
 
     const [selectedCategory, setSelectedCategory] = useState('fullstack')
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -166,10 +180,10 @@ function Portfolio() {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredProjects.length)
             }, 8000)
         }
-    
+
         return () => clearInterval(intervalRef.current)
     }, [filteredProjects.length, isPaused])
-    
+
 
     useEffect(() => {
         setCurrentIndex(0)
@@ -208,7 +222,7 @@ function Portfolio() {
                             onMouseEnter={() => setIsPaused(true)}
                             onMouseLeave={() => setIsPaused(false)}
                         >¯
-                            {filteredProjects[currentIndex].gif ? (
+                            {filteredProjects[currentIndex].gif === true ? (
                                 <img
                                     className="gif"
                                     src={filteredProjects[currentIndex].img}

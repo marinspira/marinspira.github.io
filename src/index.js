@@ -8,12 +8,14 @@ import Blog from './pages/Blog';
 import Home from './pages/Home';
 import { PostsProvider } from './contexts/postsContext';
 import Post from './pages/SinglePost';
+import ScrollToTop from './utils/scrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <PostsProvider>
       <HashRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />

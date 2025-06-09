@@ -8,10 +8,10 @@ function SectionTop() {
     <C.Section>
       <C.Container>
         <C.Content>
-          <h1>Hi! I am Maria, 👋<br />FullStack Developer.</h1>
-          {/* <span>
-            I develop software for web and mobile using with React.js, React Native, Next.js, Node.js, Express.js, and MongoDB.
-          </span> */}
+          <h1>Hi! I am Maria 👋<br />Software Developer.</h1>
+          <span>
+            I enjoy contributing to software projects I genuinely believe in. <br/> Please feel free to check out my projects and contact me.
+          </span>
           <Btn
             link1={{
               text: "Go to CV",
