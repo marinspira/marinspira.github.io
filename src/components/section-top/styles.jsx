@@ -36,12 +36,6 @@ export const ImageContainer = styled.div`
     width: 350px;
     object-fit: cover
   }
-
-  @media (max-width: 992px) {
-    img {
-      width: 150px;
-    }
-  }
 `;
 
 export const Content = styled.div`

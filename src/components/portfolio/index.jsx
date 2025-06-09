@@ -118,6 +118,34 @@ function Portfolio() {
             date: 'May, 2023',
             category: 'front',
         },
+        {
+            img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9bdkUzEXmbaOi-3wtMMLjGcjcq3_5fgtHlc10r_WOgWSaFCsvY4BhSwXWbA7L9oyxKZ7WZs9qs-yOi7dJK2RcIfABnEeK_fs5NnYTpXCnD8NvvdRjM9cv_PPYlAGN1dp8W6Wz6OVqa4rEbpGrBzmEKEbtNQP6PQket-TSnMpqwjVKW5Wdkubl6EN-nJY/w640-h360/image.png",
+            name: "Microservices Deployment via Azure",
+            category: 'devops',
+            list: [
+                "☁️ <b>Azure CLI:</b> Management of resources, subscriptions, and environments.",
+                "🐳 <b>Docker:</b> Containerized each microservice with a multi-stage Dockerfile using Java 21, improving image size and build performance.",
+                "🚀 <b>Deployment:</b> Used <b>Azure Container Apps (ACA)</b> to deploy microservices.",
+                "🔐 <b>CI/CD:</b> Built a GitHub pipeline to automate build, Docker image publishing to Docker Hub, and ACA deployment using service principals and secrets.",
+                "📦 <b>Multi-service Pipeline:</b> Implemented matrix-based workflow to deploy multiple services with shared configurations and dynamic ports.",
+              ],
+            link1: 'https://github.com/marinspira/microservices-java/blob/main/.github/workflows/ci.yml',
+            textLink1: 'Go to .yml file',
+            date: 'May, 2025',
+        },
+        {
+            img: "https://storage.googleapis.com/support-kms-prod/dCVdVst3A3cmbTkiGoxcUJZq0orhKw4LPDeH",
+            name: "React Native CI/CD with Expo & Google Play",
+            category: "devops",
+            list: [
+              "🛠 <b>EAS Config:</b> Defined <code>eas.json</code> with structured build and submit profiles for development, preview, and production environments.",
+              "⚙️ <b>CI/CD Pipeline:</b> Automated builds with EAS Build and deploys to Google Play using GitHub Actions and EAS CLI for seamless mobile delivery.",
+              "🔐 <b>Secrets & Environments:</b> Managed all credentials (Expo token, service account JSON, env files) using GitHub Secrets and environment-based configs.",
+              "☁️ <b>GCP Integration:</b> Configured a Google Cloud service account with Play Console access to authenticate and submit apps via CI workflow.",
+              "📱 <b>Google Play:</b> Submitted Android App Bundles (.aab) directly to the internal testing track with versioning and draft release status."
+            ],
+            date: 'May, 2025',
+          }
     ]
 
     const categories = ['fullstack', 'back', 'devops', 'front']
@@ -149,7 +177,7 @@ function Portfolio() {
         <C.Container id='projects'>
 
             <C.Wrapper>
-                <h2>Projects I have done</h2>
+                <h2>Main Projects</h2>
                 <C.Tabs>
                     {categories.map((cat) => (
                         <C.Tab
@@ -201,13 +229,13 @@ function Portfolio() {
                         <C.Content>
                             <span className="date">{filteredProjects[currentIndex].date}</span>
                             <h3>{filteredProjects[currentIndex].name}</h3>
-                            {filteredProjects[currentIndex].skills.map((skill) => (
+                            {/* {filteredProjects[currentIndex].skills.map((skill) => (
                                 <img
                                     key={skill}
                                     src={`https://skillicons.dev/icons?i=${skill}`}
                                     alt={skill}
                                 />
-                            ))}
+                            ))} */}
                             <C.Description>{filteredProjects[currentIndex].describe}</C.Description>
                             <C.List>
                                 {filteredProjects[currentIndex].list?.map((item, index) => (

@@ -86,7 +86,7 @@ export const Dot = styled.div`
   height: 3px;
   margin: 0 4px;
   background-color: #bbb;
-  border-radius: 10px;
+  border-radius: 0px;
   cursor: pointer;
 
   &.active {
@@ -104,7 +104,7 @@ export const Item = styled.li`
 
 export const PostCard = styled.div`
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
     display: flex;
     gap: 40px;
     background-color: var(--grey);
