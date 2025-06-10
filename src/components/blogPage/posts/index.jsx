@@ -9,9 +9,7 @@ import { PostsContext } from '../../../contexts/postsContext';
 // utils
 import Post from '../../postCardItem';
 
-function Posts() {
-
-    const { posts } = useContext(PostsContext)
+function Posts({ posts }) {
 
     return (
         <C.Container>

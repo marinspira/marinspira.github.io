@@ -131,6 +131,8 @@ function Portfolio() {
             ],
             link1: 'https://github.com/marinspira/microservices-java/blob/main/.github/workflows/ci.yml',
             textLink1: 'Go to .yml file',
+            textLink2: 'Post written from the experience',
+            link2: "https://marinspira.github.io/#/blog/deploying-java-spring-boot-on-azure-container-apps-aca-with-ci-cd",
             date: 'May, 2025',
             gif: true,
         },
@@ -146,6 +148,8 @@ function Portfolio() {
                 "📱 <b>Google Play:</b> Submitted Android App Bundles (.aab) directly to the internal testing track with versioning and draft release status."
             ],
             date: 'May, 2025',
+            link1: 'https://marinspira.github.io/#/blog/deploying-android-apps-with-ci-cd-github-eas-play-console',
+            textLink1: 'Post written from the experience',
             gif: true,
         },
         // {
