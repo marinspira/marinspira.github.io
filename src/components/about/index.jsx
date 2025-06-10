@@ -16,7 +16,7 @@ function About() {
                     I've been passionate about programming since I was 12, when I decided to create a blog about books and movies. Since then, I've never stopped developing websites and systems. 
                     <br />
                     <br />
-                    I am currently studying Software Engineering, have a diploma in Digital Marketing, and I love acquiring new knowledge, exploring new places, and creating things that bring memorable experiences to people.
+                    I am currently studying Software Engineering, have a degree in Digital Marketing, and I love acquiring new knowledge, exploring new places, and creating things that bring memorable experiences to people.
                 </span>
             </div>
         </C.Container >

@@ -4,7 +4,7 @@ import { PostsContext } from '../../contexts/postsContext';
 import Post from '../../components/postCardItem';
 import { Link } from 'react-router-dom';
 
-function Blog() {
+function Blog({ title }) {
 
     const { posts } = useContext(PostsContext)
 
@@ -12,7 +12,7 @@ function Blog() {
         <C.Section >
             <C.Container id="blog">
                 <C.Wrapper>
-                    <C.Title>Blog</C.Title>
+                    <C.Title>{title}</C.Title>
                     <Link to="/blog">View all posts →</Link>
                 </C.Wrapper>
                 <ul>

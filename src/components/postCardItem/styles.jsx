@@ -13,14 +13,13 @@ export const Post = styled(Link)`
   color: var(--dark);
 
   label {
-    background: #aa4eff;
+    background: var(--dark);
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 1px 15px;
+    padding: 5px 10px;
     border-radius: 3px;
-    position: absolute;
     bottom: 20px;
   }
 
@@ -34,7 +33,11 @@ export const Post = styled(Link)`
 export const Title = styled.p`
     font-size: 20px;
     font-weight: 600;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
+`
+
+export const Date = styled.p`
+    margin-top: 20px;
 `
 
 export const Image = styled.img`
