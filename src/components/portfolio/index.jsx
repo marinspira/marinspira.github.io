@@ -148,23 +148,23 @@ function Portfolio() {
             date: 'May, 2025',
             gif: true,
         },
-        {
-            img: "https://cdn-icons-png.flaticon.com/512/235/235861.png",
-            name: "React Native Expo Application",
-            category: "mobile",
-            list: [
-                "📲 <b>Mobile-first Stack:</b> Fully developed from scratch using React Native and Expo SDK 52 for the frontend and Express.js with MongoDB for the backend.",
-                "💻 <b>Simulated Environments:</b> Testing experience using Android Studio Emulator and Xcode iOS Simulator for cross-platform validation/debugging.",
-                "🌐 <b>Local-to-Cloud Integration:</b> Tunneled local backend servers using Ngrok to expose APIs for mobile testing on physical devices.",
-                "💬 <b>Real-time Features:</b> Implemented real-time features using WebSocket.",
-                "🚀 <b>CI/CD:</b> Automated builds with EAS, GitHub Actions and Google Play."
-            ],
-            date: "June, 2024",
-            gif: true
-        }
+        // {
+        //     img: "https://cdn-icons-png.flaticon.com/512/235/235861.png",
+        //     name: "React Native Expo Application",
+        //     category: "mobile",
+        //     list: [
+        //         "📲 <b>Mobile-first Stack:</b> Fully developed from scratch using React Native and Expo SDK 52 for the frontend and Express.js with MongoDB for the backend.",
+        //         "💻 <b>Simulated Environments:</b> Testing experience using Android Studio Emulator and Xcode iOS Simulator for cross-platform validation/debugging.",
+        //         "🌐 <b>Local-to-Cloud Integration:</b> Tunneled local backend servers using Ngrok to expose APIs for mobile testing on physical devices.",
+        //         "💬 <b>Real-time Features:</b> Implemented real-time features using WebSocket.",
+        //         "🚀 <b>CI/CD:</b> Automated builds with EAS, GitHub Actions and Google Play."
+        //     ],
+        //     date: "June, 2024",
+        //     gif: true
+        // }
     ]
 
-    const categories = ['fullstack', 'mobile', 'devops', 'frontend']
+    const categories = ['fullstack', 'devops', 'frontend']
 
     const [selectedCategory, setSelectedCategory] = useState('fullstack')
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -216,7 +216,7 @@ function Portfolio() {
                     ))}
                 </C.PaginationDots>
 
-                {filteredProjects.length > 0 && (
+                {filteredProjects.length > 0 && filteredProjects[currentIndex] && (
                     <C.PostCard key={filteredProjects[currentIndex].name} className="fade">
                         <C.ContentImage
                             onMouseEnter={() => setIsPaused(true)}

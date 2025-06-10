@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Banner = styled.div`
-    background: linear-gradient(to right, #aa4eff, #f1b8d7);
+    // background: linear-gradient(to right, #aa4eff, #f1b8d7);
+    // background: linear-gradient(to right, #aa4eff, var(--dark));
+    background-color: var(--dark);
     height: 300px;
     display: flex;
     align-items: center;

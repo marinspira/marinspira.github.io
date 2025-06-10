@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import * as C from './styles';
 import { PostsContext } from '../../contexts/postsContext';
 import Post from '../../components/postCardItem';
+import { Link } from 'react-router-dom';
 
 function Blog() {
 
@@ -10,7 +11,10 @@ function Blog() {
     return (
         <C.Section >
             <C.Container id="blog">
-                <C.Title>Blog</C.Title>
+                <C.Wrapper>
+                    <C.Title>Blog</C.Title>
+                    <Link to="/blog">View all posts →</Link>
+                </C.Wrapper>
                 <ul>
                     {posts && posts.slice(0, 3).map((post) => (
                         <Post post={post} />

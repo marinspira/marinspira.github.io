@@ -5,6 +5,24 @@ export const Section = styled.section`
   display: flex;
 `
 
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+
+  a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
+
 export const Container = styled.div`
   padding: 80px 0px;
   max-width: 1500px;
@@ -26,10 +44,8 @@ export const Container = styled.div`
   @media (max-width: 992px) {
     max-width: 100%;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
   }
 `;
 
 export const Title = styled.h2`
-  margin-bottom: 40px;
 `
