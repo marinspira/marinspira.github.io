@@ -26,6 +26,12 @@ export const Container = styled.div`
   }
 `;
 
+export const Title = styled.h2`
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+`
+
 export const Form = styled.form`
     display: flex;
     flex-direction: column;

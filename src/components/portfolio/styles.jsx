@@ -14,6 +14,7 @@ export const Container = styled.div`
   h2 {
     font-size: 50px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   @media (max-width: 992px) {
