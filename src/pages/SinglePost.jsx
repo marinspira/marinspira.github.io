@@ -22,16 +22,15 @@ const Container = styled.div`
   }
 `
 
+const PostTitle = styled.h1`
+    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+    font-size: 2.5em;
+`
+
 const PostContent = styled.div`
 
-blockquote {
-    background-color: #f7f7f7;
-    border-left: 4px solid #333;
-    padding: 30px;
-    margin: 20px 0;
-    font-size: 16px;
-    font-family: monospace;
-  }
+
+
 `
 
 function removeFirstImage(htmlString) {
@@ -59,7 +58,7 @@ function Post() {
         <Container>
             {singlePost ? (
                 <div>
-                    <h2>{singlePost.title}</h2>
+                    <PostTitle>{singlePost.title}</PostTitle>
                     <PostContent dangerouslySetInnerHTML={{ __html: removeFirstImage(singlePost.content) }} />
                 </div>
             ) : (

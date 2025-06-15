@@ -197,7 +197,7 @@ function Portfolio() {
         <C.Container id='projects'>
 
             <C.Wrapper>
-                <h2>Main Projects</h2>
+                <h2>MAIN PROJECTS</h2>
                 <C.Tabs>
                     {categories.map((cat) => (
                         <C.Tab

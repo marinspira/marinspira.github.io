@@ -20,15 +20,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h2 {
-  font-size: 48px;
-  text-transform: uppercase;
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+  font-size: 2.5em;
 }
 
-span {
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+span, p {
+  font-family: inherit;
   color: var(--text);
   font-size: 16px;
   line-height: 25px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+blockquote {
+  background-color: #1f1f1f;
+  border-left: 4px solid #333;
+  padding: 30px;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: monospace;
+  max-width: "100%";
 }
 
 code {
