@@ -8,13 +8,14 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
-  padding: 180px 0px 80px 0px;
-  width: 90vw;
   max-width: 1500px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
 
   @media (max-width: 992px) {
     max-width: 100%;
@@ -48,6 +49,7 @@ export const Content = styled.div`
     font-size: 50px;
     font-weight: 600;
     color: var(--dark);
+    text-align: center;
   }
 
   div {

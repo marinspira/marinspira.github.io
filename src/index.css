@@ -11,6 +11,10 @@
   --grey: #f9f9f9;
   --text: #474747;
   --white: #fff;
+  --blue: #3D5AFE;
+  --pink: #FF4081;
+  --purple: #7C4DFF;
+  --grey-light: #B0BEC5;
 }
 
 body {
@@ -54,6 +58,10 @@ blockquote {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: var(--pink);
 }
 
 .whatsapp {

@@ -8,24 +8,13 @@ function SectionTop() {
     <C.Section>
       <C.Container>
         <C.Content>
-          <h1>Hi! I am Maria 👋<br />Software Developer.</h1>
-          <span>
-            I enjoy contributing to software projects I genuinely believe in. <br/> Please feel free to check out my projects and contact me.
-          </span>
-          <Btn
-            link1={{
-              text: "Go to CV",
-              link: 'https://drive.google.com/file/d/1xzjjmu0RbDJ7RodjgrPiejD7EVm2suff/view?usp=sharing'
-            }}
-            link2={{
-              text: "GitHub",
-              link: 'https://github.com/marinspira'
-            }}
-          />
+          <h1>— Hi! I'm Maria, a software <br/> developer based in Brazil.</h1>
+          {/* I enjoy contributing to software projects I genuinely believe in. */}
+          <span>Previously at <a href='http://totvs.com.br/'><b>@Totvs</b></a></span>
         </C.Content>
-        <C.ImageContainer>
+        {/* <C.ImageContainer>
           <img src={me} alt='Maria Eduarda' />
-        </C.ImageContainer>
+        </C.ImageContainer> */}
       </C.Container>
     </C.Section>
   );
