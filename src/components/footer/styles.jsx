@@ -8,4 +8,7 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: center;
 
+    p {
+        color: #fff;
+    }
 `

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 // assets
-import * as C from '../../../sections/sectionPostCards/styles'
+import * as C from '../../../sections/recent-posts/styles'
 
 // contexts
 import { PostsContext } from '../../../contexts/postsContext';

@@ -5,7 +5,7 @@ import { renderHTML } from '../utils/renderHtml';
 
 import styled from 'styled-components';
 import { PostsContext } from '../contexts/postsContext';
-import Blog from '../sections/sectionPostCards';
+import Blog from '../sections/recent-posts';
 
 const Container = styled.div`
   padding: 150px 10px;

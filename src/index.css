@@ -7,13 +7,15 @@
 }
 
 :root {
-  --dark: #2d2e32;
   --grey: #f9f9f9;
   --text: #474747;
   --white: #fff;
+  --dark: #2d2e32;
+  --black: #000;
   --blue: #3D5AFE;
-  --pink: #FF4081;
   --purple: #7C4DFF;
+  /* --gray: #467904; */
+  --gray: #162e4c;
   --grey-light: #B0BEC5;
 }
 
@@ -34,7 +36,8 @@ h2 {
   font-size: 30px;
 }
 
-span, p {
+span,
+p {
   font-family: inherit;
   color: var(--text);
   font-size: 16px;
@@ -61,7 +64,7 @@ code {
 }
 
 a {
-  color: var(--pink);
+  color: var(--purple);
 }
 
 .whatsapp {

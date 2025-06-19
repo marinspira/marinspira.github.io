@@ -1,8 +1,9 @@
 import About from "../components/about";
-import Blog from "../sections/sectionPostCards";
+import Blog from "../sections/recent-posts";
 import Contact from "../components/contact";
-import Portfolio from "../components/portfolio";
-import SectionTop from "../sections/section-top";
+// import Portfolio from "../components/sections/portfolio";
+import Portfolio from "../sections/portfolio-grid"
+import SectionTop from "../sections/top";
 
 function Home() {
     return (
