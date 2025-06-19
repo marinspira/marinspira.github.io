@@ -48,7 +48,44 @@ export const Navbar = styled.ul`
     gap: 25px;
 
     li a {
-        color: var(--dark);
         font-weight: 600;
+        cursor: pointer;
+        padding: 20px;
+        color: var(--dark);
+        width: 100%;
+    }
+
+    li a:hover {
+    @media (max-width: 600px) {
+        color: var(--white);
+        background-color: var(--black)
+    }}
+
+    li {
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }}
+
+    @media (max-width: 600px) {
+        position: absolute;
+        top: 70px;
+        gap: 0px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        display: ${({ menuOpen }) => (menuOpen ? 'flex' : 'none')};
     }
 `
+
+export const MenuIcon = styled.div`
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+`;

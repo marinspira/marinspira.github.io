@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import * as C from './styles'
 import { HashLink } from 'react-router-hash-link';
+import { FaBars } from 'react-icons/fa';
 
 function Header() {
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +35,10 @@ function Header() {
         <C.HeaderMain visible={showHeader}>
             <C.Header>
                 <C.Title href='/'>maria</C.Title>
-                <C.Navbar>
+                <C.MenuIcon onClick={toggleMenu}>
+                    <FaBars />
+                </C.MenuIcon>
+                <C.Navbar menuOpen={menuOpen}>
                     <li><HashLink to="/#about">About</HashLink></li>
                     <li><a href='/#/blog'>Blog</a></li>
                     <li><HashLink to="/#contact">Contact</HashLink></li>
