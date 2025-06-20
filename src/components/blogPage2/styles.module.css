@@ -17,7 +17,8 @@
 }
 
 .sideBar {
-    min-width: 266px;
+    min-width: 230px;
+    max-width: 266px;
     border-right: 1px solid #454545c0;
     padding: 20px;
     position: sticky;
@@ -51,7 +52,7 @@
     color: var(--black);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 650px) {
     .sideBar {
         display: none;
     }
