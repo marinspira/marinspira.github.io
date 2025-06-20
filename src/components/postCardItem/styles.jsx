@@ -25,8 +25,10 @@ export const Post = styled(Link)`
     overflow: hidden;
     box-shadow: 0 4px 8px #00000008;
 
-  @media (max-width: 992px) {
+  @media (min-width: 480px) and (max-width: 700px)  {
     width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 
   label {
@@ -70,4 +72,8 @@ export const Image = styled.img`
     object-fit: cover;
     width: 100%;
     height: 200px;
+
+    @media (min-width: 480px) and (max-width: 700px) {
+    width: 33%
+  }
 `

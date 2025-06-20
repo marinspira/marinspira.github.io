@@ -48,3 +48,9 @@
     font-size: 14px;
     color: var(--black);
 }
+
+@media screen and (max-width: 950px) {
+    .sideBar {
+        display: none;
+    }
+}
