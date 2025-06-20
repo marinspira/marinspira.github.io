@@ -19,8 +19,10 @@ function Post({ post }) {
     return (
         <C.Post to={`/blog/${slug}`} key={post.id}>
             <C.Image src={image} alt={post.title} />
-            <C.Date>{formattedDate}</C.Date> 
-            <C.Title>{post.title}</C.Title>
+            <C.Content>
+                <C.Date>{formattedDate}</C.Date>
+                <C.Title>{post.title}</C.Title>
+            </C.Content>
             {/* <div dangerouslySetInnerHTML={renderHTML(limitText(contentWithoutImage, 280))} /> */}
             {/* {post.labels && <label>{post.labels}</label>} */}
         </C.Post>

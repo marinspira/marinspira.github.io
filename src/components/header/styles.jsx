@@ -9,7 +9,7 @@ export const Header = styled.div`
 
 export const HeaderMain = styled.header`
     background-color: var(--white);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .09);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .09); */
     padding: 20px 40px;
     position: fixed;
     display: flex;

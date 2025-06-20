@@ -15,7 +15,8 @@
   --blue: #3D5AFE;
   --purple: #7C4DFF;
   --gray: #162e4c;
-  --grey-light: #B0BEC5;
+  --grey-light: #f9f9f9;
+  --grey-dark: #e7e7e7;
 }
 
 .dark-theme {
@@ -27,7 +28,8 @@
   --blue: #3D5AFE;
   --purple: #7C4DFF;
   --gray: #162e4c;
-  --grey-light: #B0BEC5;
+  --grey-light: #242426;
+  --grey-dark: #404756;
 }
 
 body {
