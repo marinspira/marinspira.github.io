@@ -5,12 +5,14 @@ export const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1800px;
+    padding: 0 20px;
 `
 
 export const HeaderMain = styled.header`
     background-color: var(--white);
     /* box-shadow: 0 0 10px rgba(0, 0, 0, .09); */
-    padding: 20px 40px;
+    padding: 20px 0px;
     position: fixed;
     display: flex;
     top: 0;
