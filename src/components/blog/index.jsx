@@ -1,32 +1,24 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import styles from "./styles.module.css"
-import { PostsContext } from '../../contexts/postsContext';
-import SinglePost from "../../pages/SinglePost"
 import Search from '../blogPage/search';
-import Posts from '../blogPage/posts';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { HeaderVisibilityContext } from '../../contexts/headerVisibilityContext';
+import { PostsContext } from '../../contexts/postsContext';
 
-function BlogContent() {
+function BlogStructure({ children }) {
 
     const { posts } = useContext(PostsContext);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedTag, setSelectedTag] = useState(null);
 
-    const { showHeader, setScrollContainer } = useContext(HeaderVisibilityContext);
-
-    const scrollRef = useRef(null);
-
-    useEffect(() => {
-        setScrollContainer(scrollRef.current);
-    }, [setScrollContainer]);
+    const { showHeader } = useContext(HeaderVisibilityContext);
 
     const navigate = useNavigate();
 
     const handleTagClick = (tag) => {
         setSelectedTag(prev => prev === tag ? null : tag);
         setSearchTerm('');
-        navigate('.');
+        navigate('/blog');
     };
 
     const allTags = [...new Set(posts.flatMap(post => post.labels || []))];
@@ -62,16 +54,10 @@ function BlogContent() {
                         ))}
                     </ul>
                 </div>
-
-                <div className={styles.postArea} ref={scrollRef}>
-                    <Routes>
-                        <Route index element={<Posts posts={filteredPosts} />} />
-                        <Route path=":slug" element={<SinglePost posts={posts} />} />
-                    </Routes>
-                </div>
+                {typeof children === 'function' ? children(filteredPosts) : children}
             </div>
         </div>
     );
 }
 
-export default BlogContent;
+export default BlogStructure;

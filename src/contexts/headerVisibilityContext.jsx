@@ -4,15 +4,15 @@ export const HeaderVisibilityContext = createContext();
 
 export function HeaderVisibilityProvider({ children }) {
   const [showHeader, setShowHeader] = useState(true);
-  const scrollContainerRef = useRef(null); // pode ser window ou um elemento DOM
+  const [scrollContainer, setScrollContainer] = useState(null);
   const lastScrollYRef = useRef(0);
 
-  const setScrollContainer = useCallback((ref) => {
-    scrollContainerRef.current = ref;
+  const handleSetScrollContainer = useCallback((ref) => {
+    setScrollContainer(ref);
   }, []);
 
   useEffect(() => {
-    const container = scrollContainerRef.current || window;
+    const container = scrollContainer || window;
 
     const handleScroll = () => {
       const currentScrollY = container === window
@@ -26,10 +26,10 @@ export function HeaderVisibilityProvider({ children }) {
 
     container.addEventListener('scroll', handleScroll);
     return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrollContainer]);
 
   return (
-    <HeaderVisibilityContext.Provider value={{ showHeader, setScrollContainer }}>
+    <HeaderVisibilityContext.Provider value={{ showHeader, setScrollContainer: handleSetScrollContainer }}>
       {children}
     </HeaderVisibilityContext.Provider>
   );

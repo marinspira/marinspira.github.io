@@ -1,10 +1,25 @@
-import BlogContent from '../components/blogPage2';
+import React, { useContext, useState } from 'react';
+import { PostsContext } from '../contexts/postsContext';
+import SinglePost from "../components/singlepost"
+import Posts from '../components/blogPage/posts';
+import { Route, Routes } from 'react-router-dom';
+import BlogStructure from '../components/blog';
 
 function Blog() {
-
+    const { posts } = useContext(PostsContext);
+  
     return (
-        <BlogContent/>
+        <BlogStructure>
+        {(filteredPosts) => (
+          <Routes>
+            <Route index element={<Posts posts={filteredPosts} />} />
+            <Route path=":slug" element={<SinglePost posts={filteredPosts} />} />
+          </Routes>
+        )}
+      </BlogStructure>
+      
     );
-}
+  }
+  
 
 export default Blog;

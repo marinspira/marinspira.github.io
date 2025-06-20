@@ -1,5 +1,29 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  background-color: var(--white);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  
+  ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+`;
 
 export const PostArchive = styled.div`
   display: grid;
@@ -18,24 +42,3 @@ export const PostArchive = styled.div`
 
 `
 
-export const Container = styled.div`
-  background-color: var(--white);
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0 auto;
-  flex-direction: column;
-  
-  ul {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-around;
-  }
-
-  @media (max-width: 992px) {
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-`;

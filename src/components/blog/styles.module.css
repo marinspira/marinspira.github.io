@@ -29,11 +29,6 @@
     opacity: 0;
 }
 
-.postArea {
-    padding: 20px;
-    overflow-y: auto;
-}
-
 .activeTag {
     background: #ffffff0f;
     border-left: 4px solid var(--purple);

@@ -7,7 +7,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Blog from './pages/Blog';
 import Home from './pages/Home';
 import { PostsProvider } from './contexts/postsContext';
-import Post from './pages/SinglePost';
 import ScrollToTop from './utils/scrollToTop';
 import { HeaderVisibilityProvider } from './contexts/headerVisibilityContext';
 
@@ -22,7 +21,6 @@ root.render(
             <Route path="/" element={<App />}>
               <Route index element={<Home />} />
               <Route path="blog/*" element={<Blog />} />
-              {/* <Route path="blog/:slug" element={<Post />} /> */}
             </Route>
           </Routes>
         </HashRouter>
