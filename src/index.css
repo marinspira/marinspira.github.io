@@ -14,7 +14,18 @@
   --black: #000;
   --blue: #3D5AFE;
   --purple: #7C4DFF;
-  /* --gray: #467904; */
+  --gray: #162e4c;
+  --grey-light: #B0BEC5;
+}
+
+.dark-theme {
+  --grey: #000;
+  --text: #474747;
+  --white: #1b1b1d;
+  --dark: #f9f9f9;
+  --black: #fff;
+  --blue: #3D5AFE;
+  --purple: #7C4DFF;
   --gray: #162e4c;
   --grey-light: #B0BEC5;
 }
@@ -79,4 +90,15 @@ a {
 
 .whatsapp svg {
   font-size: 35px;
+}
+
+.container {
+  /* padding: 80px 0px; */
+  max-width: 1100px;
+  width: 90vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: column;
 }

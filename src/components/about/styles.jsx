@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 80px 0px;
-  max-width: 1500px;
-  width: 90vw;
+  /* max-width: 1500px;
+  width: 90vw; */
   display: flex;
   align-items: center;
   justify-content: space-between;

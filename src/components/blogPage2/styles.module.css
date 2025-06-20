@@ -1,0 +1,39 @@
+.container {
+    padding: 100px 10px;
+    background-color: var(--white);
+    max-width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar {
+    width: 266px;
+    border-right: 1px solid #454545c0;
+    padding: 20px;
+    position: sticky;
+}
+
+.postArea {
+    padding: 20px;
+}
+
+.activeTag {
+    background: #ffffff0f;
+    border-left: 4px solid var(--purple);
+    padding-left: 8px !important;
+}
+
+.tag {
+    padding-left: 8px !important;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+.tag span,
+.activeTag span {
+    font-size: 14px;
+    color: var(--black);
+}

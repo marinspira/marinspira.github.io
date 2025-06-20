@@ -10,17 +10,19 @@ function Blog({ title }) {
 
     return (
         <C.Section >
-            <C.Container id="blog">
-                <C.Wrapper>
-                    <C.Title>{title}</C.Title>
-                    <Link to="/blog">View all posts →</Link>
-                </C.Wrapper>
-                <ul>
-                    {posts && posts.slice(0, 3).map((post) => (
-                        <Post post={post} />
-                    ))}
-                </ul>
-            </C.Container>
+            <div className='container'>
+                <C.Container id="blog">
+                    <C.Wrapper>
+                        <C.Title>{title}</C.Title>
+                        <Link to="/blog">View all posts →</Link>
+                    </C.Wrapper>
+                    <ul>
+                        {posts && posts.slice(0, 3).map((post) => (
+                            <Post post={post} />
+                        ))}
+                    </ul>
+                </C.Container>
+            </div>
         </C.Section>
     );
 }

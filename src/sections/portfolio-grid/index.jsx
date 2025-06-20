@@ -110,33 +110,35 @@ function Portfolio() {
 
     return (
         <C.Section>
-            <C.Container id='projects'>
-                {projects.map((project, index) => (
-                    <C.PostCard key={index} $bgColor={project.bgColor}>
-                        <C.Wrapper>
-                            <p>{project.name}</p>
-                            <C.List>
-                                {project.list?.map((item, index) => (
-                                    <li><span dangerouslySetInnerHTML={{ __html: item }} /></li>
-                                ))}
-                            </C.List>
-                        </C.Wrapper>
-                        {project.device === "desk" ? (
-                            <C.MockupWrapper>
-                                <C.MockupDesk src={mockup} alt={project.name} />
-                                <C.MockupScreenshot src={project.img} alt={project.name} />
-                            </C.MockupWrapper>
-                            // <C.MockupScreenshot2 src={project.img} alt={project.name} />
-                        ) : project.device === "mobile" ? (
-                            <C.ImageMobile src={project.img} alt={project.name} />
-                        ) : (
-                            <C.ImageMobile src={project.img} alt={project.name} />
-                        )}
+                <div className='container'>
+                <C.Container id='projects'>
+                    {projects.map((project, index) => (
+                        <C.PostCard key={index} $bgColor={project.bgColor}>
+                            <C.Wrapper>
+                                <p>{project.name}</p>
+                                <C.List>
+                                    {project.list?.map((item, index) => (
+                                        <li><span dangerouslySetInnerHTML={{ __html: item }} /></li>
+                                    ))}
+                                </C.List>
+                            </C.Wrapper>
+                            {project.device === "desk" ? (
+                                <C.MockupWrapper>
+                                    <C.MockupDesk src={mockup} alt={project.name} />
+                                    <C.MockupScreenshot src={project.img} alt={project.name} />
+                                </C.MockupWrapper>
+                                // <C.MockupScreenshot2 src={project.img} alt={project.name} />
+                            ) : project.device === "mobile" ? (
+                                <C.ImageMobile src={project.img} alt={project.name} />
+                            ) : (
+                                <C.ImageMobile src={project.img} alt={project.name} />
+                            )}
 
-                    </C.PostCard>
-                ))}
-            </C.Container>
-        </C.Section>
+                        </C.PostCard>
+                    ))}
+                </C.Container>
+        </div>
+            </C.Section>
     )
 }
 

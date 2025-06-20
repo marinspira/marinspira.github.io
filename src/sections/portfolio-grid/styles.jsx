@@ -29,7 +29,7 @@ export const MobileWrapper = styled.div`
 `
 
 export const ImageMobile = styled.img`
-    height: 420px;
+    height: 350px;
     object-fit: contain;
     object-position: top center;
 
@@ -62,7 +62,8 @@ export const List = styled.ul`
 
     span {
         font-size: 16px;
-        color: var(--white)
+        /* color: var(--white) */
+        color: #fff
     }
 `
 
@@ -76,7 +77,8 @@ export const Wrapper = styled.div`
         font-size: 30px;
         font-weight: 600;
         margin: 0 0 20px 0;
-        color: var(--white)
+        /* color: var(--white) */
+        color: #fff
     }
 `
 
@@ -84,8 +86,8 @@ export const Container = styled.div`
     padding: 0px 0px 80px 0px;
     display: flex;
     flex-direction: row;
-    width: 90vw;
-    max-width: 1500px;
+    /* width: 90vw; */
+    /* max-width: 1500px; */
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,7 +106,7 @@ export const Container = styled.div`
 
 export const PostCard = styled.div`
     width: 48%;
-    height: 650px;
+    height: 600px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;

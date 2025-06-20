@@ -52,6 +52,10 @@ export const Content = styled.div`
     text-align: center;
   }
 
+  span {
+    color: var(--dark);
+  }
+
   div {
     display: flex;
     font-size: 30px;

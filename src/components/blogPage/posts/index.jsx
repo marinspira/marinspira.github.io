@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 // assets
-import * as C from '../../../sections/recent-posts/styles'
+import * as C from './styles'
 
 // contexts
 import { PostsContext } from '../../../contexts/postsContext';
@@ -13,12 +13,14 @@ function Posts({ posts }) {
 
     return (
         <C.Container>
-            <ul>
-                {posts.map((post, index) => (
-                    <Post key={index} post={post} />
-                ))}
-            </ul>
-        </C.Container>
+                <div className='container'>
+                <C.PostArchive>
+                    {posts.map((post, index) => (
+                        <Post key={index} post={post} />
+                    ))}
+                </C.PostArchive>
+        </div>
+            </C.Container>
     );
 }
 

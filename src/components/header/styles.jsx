@@ -1,30 +1,16 @@
 import styled from 'styled-components';
 
-// export const HeaderMain = styled.header`
-//     background-color: #fff;
-//     box-shadow: 0 0 10px rgba(0, 0, 0, .09);
-//     padding: 30px 0;
-//     position: fixed;
-//     display: flex;
-//     top: 0;
-//     width: 100%;
-//     z-index: 999;
-//     height: auto;
-//     justify-content: center;
-// `
-
 export const Header = styled.div`
-    max-width: 1500px;
-    width: 90vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `
 
 export const HeaderMain = styled.header`
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, .09);
-    padding: 30px 0;
+    padding: 20px 40px;
     position: fixed;
     display: flex;
     top: 0;
@@ -34,13 +20,19 @@ export const HeaderMain = styled.header`
     justify-content: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: ${({ visible }) => (visible ? 1 : 0)};
+    margin: 0 auto;
 `
 
 export const Title = styled.a`
     font-family: inherit;
-    font-size: 30px;
+    font-size: 20px;
     color: var(--dark);
     font-weight: 600;
+
+    &:focus-visible {
+        border: none;
+        outline: none;
+    }
 `
 
 export const Navbar = styled.ul`

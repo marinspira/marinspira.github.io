@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
   margin-bottom: 40px;
 
   a {
-    color: var(--primary);
+    color: var(--black);
     font-weight: 600;
     text-decoration: none;
 
@@ -25,8 +25,6 @@ export const Wrapper = styled.section`
 
 export const Container = styled.div`
   padding: 80px 0px;
-  max-width: 1500px;
-  width: 90vw;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -51,4 +49,5 @@ export const Title = styled.h2`
     font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
+    color: var(--black);
 `

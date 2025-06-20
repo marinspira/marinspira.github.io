@@ -6,7 +6,6 @@ export const Section = styled.section`
 
 export const Container = styled.div`
   padding: 100px 30px;
-  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +29,7 @@ export const Title = styled.h2`
   font-size: 50px;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--dark);
 `
 
 export const Form = styled.form`
@@ -54,7 +54,7 @@ export const Form = styled.form`
         padding: 8px;
         font-size: 16px;
         font-family: inherit;
-        color: white;
+        color: var(--white);
         border-radius: 3px;
         cursor: pointer;
     }

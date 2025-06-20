@@ -2,15 +2,22 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Post = styled(Link)`
-  background-color: #fff;
+  background-color: var(--black);
   padding: 20px 20px 20px 20px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 700px;
   overflow: hidden;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.049);
+  /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.049); */
+  border: solid 1px var(--black);
   border-radius: 10px;
   position: relative;
   cursor: pointer;
   color: var(--dark);
+  flex: 1;
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 
   label {
     background: var(--dark);
@@ -33,17 +40,17 @@ export const Post = styled(Link)`
 export const Title = styled.p`
     font-size: 20px;
     font-weight: 600;
-    margin: 10px 0 20px 0;
+    color: var(--white);
 `
 
 export const Date = styled.p`
-    margin-top: 20px;
+    margin: 20px 0 0 0;
+    color: var(--white);
 `
 
 export const Image = styled.img`
     object-fit: cover;
     width: 100%;
-    max-height: 200px;
     border-radius: 10px;
-
+    height: 200px;
 `

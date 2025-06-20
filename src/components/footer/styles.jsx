@@ -9,6 +9,6 @@ export const Footer = styled.footer`
     justify-content: center;
 
     p {
-        color: #fff;
+        color: var(--white);
     }
 `

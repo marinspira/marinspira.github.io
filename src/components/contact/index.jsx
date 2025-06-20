@@ -41,41 +41,43 @@ function Contact() {
 
     return (
         <C.Section id="contact">
-            <C.Container>
-                <C.Title>Let's talk?</C.Title>
-                <C.Form onSubmit={handleSubmit}>
-                    <input
-                        type='text'
-                        name='name'
-                        placeholder='Name'
-                        onChange={handleChange}
-                        maxLength='20'
-                        required
-                    />
-                    <input
-                        type='email'
-                        name='email'
-                        placeholder='E-mail'
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type='text'
-                        name='company'
-                        placeholder='Company'
-                        onChange={handleChange}
-                        maxLength='20'
-                        required
-                    />
-                    <textarea
-                        name='message'
-                        placeholder='Your message'
-                        onChange={handleChange}
-                        required
-                    />
-                    <button type='submit'>Send</button>
-                </C.Form>
-            </C.Container>
+            <div className='container'>
+                <C.Container>
+                    <C.Title>Let's talk?</C.Title>
+                    <C.Form onSubmit={handleSubmit}>
+                        <input
+                            type='text'
+                            name='name'
+                            placeholder='Name'
+                            onChange={handleChange}
+                            maxLength='20'
+                            required
+                        />
+                        <input
+                            type='email'
+                            name='email'
+                            placeholder='E-mail'
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type='text'
+                            name='company'
+                            placeholder='Company'
+                            onChange={handleChange}
+                            maxLength='20'
+                            required
+                        />
+                        <textarea
+                            name='message'
+                            placeholder='Your message'
+                            onChange={handleChange}
+                            required
+                        />
+                        <button type='submit'>Send</button>
+                    </C.Form>
+                </C.Container>
+            </div>
         </C.Section>
     );
 }

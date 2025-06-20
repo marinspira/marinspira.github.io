@@ -21,7 +21,7 @@ function Post({ post }) {
             <C.Image src={image} alt={post.title} />
             <C.Date>{formattedDate}</C.Date> 
             <C.Title>{post.title}</C.Title>
-            <div dangerouslySetInnerHTML={renderHTML(limitText(contentWithoutImage, 280))} />
+            {/* <div dangerouslySetInnerHTML={renderHTML(limitText(contentWithoutImage, 280))} /> */}
             {/* {post.labels && <label>{post.labels}</label>} */}
         </C.Post>
     );
