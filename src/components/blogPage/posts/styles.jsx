@@ -7,7 +7,6 @@ export const PostArchive = styled.div`
   gap: 40px;
   width: 100%;
   justify-items: stretch;
-  margin: 80px 0;
 
   @media screen and (min-width: 600px) and (max-width: 1092px) {
   grid-template-columns: 1fr 1fr;
@@ -20,7 +19,6 @@ export const PostArchive = styled.div`
 `
 
 export const Container = styled.div`
-  padding: 80px 0px;
   background-color: var(--white);
   display: flex;
   align-items: flex-start;

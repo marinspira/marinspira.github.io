@@ -3,8 +3,9 @@ import * as C from './styles'
 
 function About() {
     return (
+        <C.Section id='about'>
         <div className='container'>
-            <C.Container id='about'>
+            <C.Container>
                 <div>
                     <img src='https://d34ad2g4hirisc.cloudfront.net/user_photos/images/001/203/595/medium/e72d91593d93ef0370ddf60c40b37eef.jpeg' alt='img' />
                 </div>
@@ -22,6 +23,7 @@ function About() {
                 </div>
             </C.Container >
         </div>
+        </C.Section >
     );
 }
 

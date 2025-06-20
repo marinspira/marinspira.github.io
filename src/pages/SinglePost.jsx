@@ -8,7 +8,7 @@ import { PostsContext } from '../contexts/postsContext';
 import Blog from '../sections/recent-posts';
 
 const Container = styled.div`
-  padding: 150px 10px;
+  padding: 0px 20px;
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ function Post() {
                 <p>Loading...</p>
             )}
         </Container>
-        <Blog title="Recent posts"/>
+        {/* <Blog title="Recent posts"/> */}
         </>
     );
 }

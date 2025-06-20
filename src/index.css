@@ -19,8 +19,8 @@
 }
 
 .dark-theme {
-  --grey: #000;
-  --text: #474747;
+  --grey: #111113;
+  --text: #fff;
   --white: #1b1b1d;
   --dark: #f9f9f9;
   --black: #fff;
@@ -45,6 +45,10 @@ h1 {
 h2 {
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
   font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--black);
 }
 
 span,
@@ -101,4 +105,8 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   flex-direction: column;
+}
+
+.hiddenSidebar {
+  display: none;
 }

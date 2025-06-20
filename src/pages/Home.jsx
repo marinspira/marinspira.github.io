@@ -12,7 +12,7 @@ function Home() {
             <Portfolio />
             <Blog title="Blog"/>
             <About />
-            <Contact />
+            {/* <Contact /> */}
         </div>
     );
 }

@@ -17,8 +17,8 @@ function Blog({ title }) {
                         <Link to="/blog">View all posts →</Link>
                     </C.Wrapper>
                     <ul>
-                        {posts && posts.slice(0, 3).map((post) => (
-                            <Post post={post} />
+                        {posts && posts.slice(0, 3).map((post, index) => (
+                            <Post key={index} post={post} />
                         ))}
                     </ul>
                 </C.Container>

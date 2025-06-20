@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Section = styled.div`
+  background-color: var(--white);
+`
+
 export const Container = styled.div`
   padding: 80px 0px;
   /* max-width: 1500px;

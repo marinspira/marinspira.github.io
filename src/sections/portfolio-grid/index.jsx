@@ -118,7 +118,7 @@ function Portfolio() {
                                 <p>{project.name}</p>
                                 <C.List>
                                     {project.list?.map((item, index) => (
-                                        <li><span dangerouslySetInnerHTML={{ __html: item }} /></li>
+                                        <li key={index}><span dangerouslySetInnerHTML={{ __html: item }} /></li>
                                     ))}
                                 </C.List>
                             </C.Wrapper>
