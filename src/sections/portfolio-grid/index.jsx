@@ -34,6 +34,8 @@ function Portfolio() {
             gif: true,
             device: "mobile",
             bgColor: "var(--purple)",
+            textColor: "#fff",
+            invert: true,
         },
         {
             img: feedz,
@@ -50,7 +52,9 @@ function Portfolio() {
             date: 'April, 2023',
             category: 'fullstack',
             bgColor: "var(--gray)",
-            device: "desk"
+            device: "desk",
+            textColor: "",
+            textColor: "#fff",
         },
         {
             img: nhall,
@@ -64,7 +68,8 @@ function Portfolio() {
             date: 'October, 2022',
             category: 'fullstack',
             bgColor: "var(--dark)",
-            device: "desk"
+            device: "desk",
+            textColor: "#000",
         },
         {
             img: feedzday,
@@ -77,7 +82,8 @@ function Portfolio() {
             date: 'August, 2023',
             category: 'frontend',
             bgColor: "var(--blue)",
-            device: "desk"
+            device: "desk",
+            invert: true,
         },
         {
             img: brisa,
@@ -90,7 +96,9 @@ function Portfolio() {
             date: 'January, 2021',
             category: 'frontend',
             bgColor: "var(--gray)",
-            device: "desk"
+            device: "desk",
+            textColor: "#fff",
+            invert: true,
         },
         {
             img: priddat,
@@ -113,8 +121,8 @@ function Portfolio() {
                 <div className='container'>
                 <C.Container id='projects'>
                     {projects.map((project, index) => (
-                        <C.PostCard key={index} $bgColor={project.bgColor}>
-                            <C.Wrapper>
+                        <C.PostCard key={index} $bgColor={project.bgColor} $invert={project.invert} >
+                            <C.Wrapper $textColor={project.textColor}>
                                 <p>{project.name}</p>
                                 <C.List>
                                     {project.list?.map((item, index) => (

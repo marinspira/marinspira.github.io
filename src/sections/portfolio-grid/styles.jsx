@@ -10,7 +10,7 @@ export const Section = styled.section`
 export const MockupDesk = styled.img`
     width: 100%;
     object-fit: contain;
-    object-position: top center;
+    /* object-position: top center; */
 `
 
 export const MockupWrapper = styled.div`
@@ -18,20 +18,18 @@ export const MockupWrapper = styled.div`
   width: 100%;
   
   @media screen and (max-width: 992px) {
-          width: 120%;
           margin-top: 40px;
     }
 `;
 
 export const MobileWrapper = styled.div`
     display: flex;
-    
 `
 
 export const ImageMobile = styled.img`
-    height: 350px;
+    height: 320px;
     object-fit: contain;
-    object-position: top center;
+    object-position: end center;
 
     @media screen and (max-width: 992px) {
         height: 300px;
@@ -78,7 +76,11 @@ export const Wrapper = styled.div`
         font-weight: 600;
         margin: 0 0 20px 0;
         /* color: var(--white) */
-        color: #fff
+        color: ${({ $textColor }) => $textColor || "#fff"};
+    }
+
+    li span {
+      color: ${({ $textColor }) => $textColor || "#fff"};
     }
 `
 
@@ -108,10 +110,12 @@ export const PostCard = styled.div`
     width: 48%;
     height: 600px;
     border-radius: 0px;
+    justify-content: space-evenly;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     // background-color: var(--grey);
+    flex-direction: ${({ $invert }) => $invert ? "column-reverse" : "column"};
     background-color: ${({ $bgColor }) => $bgColor || 'var(--grey)'};
     padding: 50px;
     margin-bottom: 50px;
@@ -147,6 +151,8 @@ export const PostCard = styled.div`
 
     @media screen and (max-width: 992px) {
         width: 100%;
+        height: auto;
+        min-height: 500px;
     }
 `
 
