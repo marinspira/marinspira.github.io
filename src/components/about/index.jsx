@@ -12,7 +12,7 @@ function About() {
                 <div>
                     <h2>About me</h2>
                     <span>
-                        My name is Maria Eduarda. I'm from Rio de Janeiro, Brazil, but I love traveling and have visited over six countries so far.
+                        My name is Maria Eduarda. I'm from Rio de Janeiro, Brazil, but I love traveling.
                         <br />
                         <br />
                         I've been passionate about programming since I was 12, when I decided to create a blog about books and movies. Since then, I've never stopped developing websites and systems.

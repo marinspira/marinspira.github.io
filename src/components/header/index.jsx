@@ -7,6 +7,16 @@ import { HeaderVisibilityContext } from '../../contexts/headerVisibilityContext'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 600);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const { showHeader } = useContext(HeaderVisibilityContext);
 
@@ -28,18 +38,29 @@ function Header() {
             {/* <div className='container'> */}
             <C.Header>
                 <C.Title href='/'>maria</C.Title>
-                <C.MenuIcon onClick={toggleMenu}>
-                    <FaBars />
-                </C.MenuIcon>
-                <C.Navbar menuOpen={menuOpen}>
-                    <div style={{ cursor: "pointer" }} onClick={() => setIsDark(prev => !prev)}>
-                        {isDark ? <IoMdSunny color='white' /> : <IoMdMoon color='black' />}
-                    </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
+                    {isMobile && (
+                        <div style={{ cursor: "pointer" }} onClick={() => setIsDark(prev => !prev)}>
+                            {isDark ? <IoMdSunny size={20} color='white' /> : <IoMdMoon size={20} color='black' />}
+                        </div>
+                    )}
+                    <C.MenuIcon onClick={toggleMenu}>
+                        <FaBars color="var(--black)" />
+                    </C.MenuIcon>
+                </div>
 
-                    <li><HashLink to="/#about">About</HashLink></li>
+                <C.Navbar menuOpen={menuOpen}>
+                    {!isMobile && (
+                        <div style={{ cursor: "pointer" }} onClick={() => setIsDark(prev => !prev)}>
+                            {isDark ? <IoMdSunny color='white' /> : <IoMdMoon color='black' />}
+                        </div>
+                    )}
                     <li><a href='/#/blog'>Blog</a></li>
-                    <li><HashLink to="/#contact">Contact</HashLink></li>
+                    <li><HashLink to="/#about">About</HashLink></li>
                     <li><HashLink to="/#projects">Projects</HashLink></li>
+                    <li><HashLink to="mailto:mariaferreira.developer@gmail.com">Contact</HashLink></li>
+                    <li><a href="https://www.github.com/marinspira" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/iamaria" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 </C.Navbar>
             </C.Header>
             {/* </div> */}

@@ -41,10 +41,14 @@ export const Navbar = styled.ul`
     display: flex;
     gap: 25px;
 
+    ul {
+        background-color: var(--white);
+    }
+
     li a {
         font-weight: 600;
         cursor: pointer;
-        padding: 20px;
+        padding: 20px 10px;
         color: var(--dark);
         width: 100%;
     }
@@ -60,6 +64,7 @@ export const Navbar = styled.ul`
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        background-color: var(--white);
     }}
 
     @media (max-width: 600px) {
