@@ -92,7 +92,6 @@ console.log("aqui", showHeader)
                                 key={item.id}
                                 style={{
                                     marginLeft: item.level === 'H3' ? '1rem' : 0,
-                                    marginBottom: '8px'
                                 }}
                             >
                                 <a

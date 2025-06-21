@@ -22,6 +22,7 @@ export const MainContent = styled.div`
   max-width: 80%; */
   width: 80%;
   padding-top: 10px;
+  padding-left: 10px;
 
   li {
     list-style-type: disc;
@@ -35,6 +36,11 @@ export const MainContent = styled.div`
 
   ul {
     padding-left: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
   }
 
   @media screen and (max-width: 992px) {
@@ -64,7 +70,8 @@ export const Sidebar = styled.div`
   }
 
   ul li a {
-    color: var(--blue);
+    color: var(--text);
+    font-size: 12px;
   }
 
   @media screen and (max-width: 992px) {

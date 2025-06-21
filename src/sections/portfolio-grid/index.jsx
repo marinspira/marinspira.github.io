@@ -16,6 +16,7 @@ import Btn from '../../components/btn';
 import { PiHandWaving } from "react-icons/pi";
 import iphone from '../../assets/mockupIphone.png'
 import { useEffect, useRef, useState } from 'react'
+import { FaArrowRight } from "react-icons/fa6";
 
 function Portfolio() {
 
@@ -41,8 +42,7 @@ function Portfolio() {
             img: feedz,
             name: 'Website @Feedz',
             skills: ['nextjs,nodejs,typescript,bitbucket,figma,gcp'],
-            link1: 'https://drive.google.com/file/d/1XOJWncAdvyoGoGa93k7qq2l9a4_Gl5WH/view?usp=sharing',
-            textLink1: 'Performance Report',
+            link: 'https://marinspira.github.io/#/blog/feedz-case-the-code-solution-that-changed-the-entire-marketing-strategy',
             list: [
                 "🧩 <b>UI:</b> Figma, Next.js, TypeScript.",
                 "🔗 <b>APIs:</b> REST, Google Cloud Plataform.",
@@ -69,7 +69,7 @@ function Portfolio() {
             category: 'fullstack',
             bgColor: "var(--dark)",
             device: "desk",
-            textColor: "#000",
+            textColor: "var(--white)",
         },
         {
             img: feedzday,
@@ -118,7 +118,7 @@ function Portfolio() {
 
     return (
         <C.Section>
-                <div className='container'>
+            <div className='container'>
                 <C.Container id='projects'>
                     {projects.map((project, index) => (
                         <C.PostCard key={index} $bgColor={project.bgColor} $invert={project.invert} >
@@ -129,6 +129,11 @@ function Portfolio() {
                                         <li key={index}><span dangerouslySetInnerHTML={{ __html: item }} /></li>
                                     ))}
                                 </C.List>
+                                {project.link &&
+                                    <C.Button $textColor={project.textColor} $bgColor={project.bgColor} href={project.link}>
+                                        <span>Read case  →</span>
+                                    </C.Button>
+                                }
                             </C.Wrapper>
                             {project.device === "desk" ? (
                                 <C.MockupWrapper>
@@ -145,8 +150,8 @@ function Portfolio() {
                         </C.PostCard>
                     ))}
                 </C.Container>
-        </div>
-            </C.Section>
+            </div>
+        </C.Section>
     )
 }
 

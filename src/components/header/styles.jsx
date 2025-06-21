@@ -28,7 +28,7 @@ export const HeaderMain = styled.header`
 export const Title = styled.a`
     font-family: inherit;
     font-size: 20px;
-    color: var(--dark);
+    color: var(--black);
     font-weight: 600;
 
     &:focus-visible {
@@ -40,6 +40,7 @@ export const Title = styled.a`
 export const Navbar = styled.ul`
     display: flex;
     gap: 25px;
+    align-items: center;
 
     ul {
         background-color: var(--white);
@@ -49,8 +50,9 @@ export const Navbar = styled.ul`
         font-weight: 600;
         cursor: pointer;
         padding: 20px 10px;
-        color: var(--dark);
+        color: var(--black);
         width: 100%;
+        font-size: 15px;
     }
 
     li a:hover {

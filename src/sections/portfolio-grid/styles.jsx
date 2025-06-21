@@ -67,9 +67,9 @@ export const List = styled.ul`
 
 export const Wrapper = styled.div`
     display: flex;
-    // flex-direction: ${props => props.switchCol ? 'row-reverse' : 'row'};
     flex-direction: column;
     width: 100%;
+    align-items: flex-start;
 
     p {
         font-size: 30px;
@@ -108,7 +108,7 @@ export const Container = styled.div`
 
 export const PostCard = styled.div`
     width: 48%;
-    height: 600px;
+    min-height: 600px;
     border-radius: 0px;
     justify-content: space-evenly;
     display: flex;
@@ -124,6 +124,7 @@ export const PostCard = styled.div`
     overflow: hidden;
     position: relative;
     align-items: center;
+    height: auto;
 
     h3 {
         font-size: 28px
@@ -151,10 +152,37 @@ export const PostCard = styled.div`
 
     @media screen and (max-width: 992px) {
         width: 100%;
-        height: auto;
         min-height: 500px;
     }
 `
+
+export const Button = styled.a`
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: ${({ $textColor }) => $textColor || 'var(--white)'};
+
+  &:hover {
+    border: 2px solid ${({ $textColor }) => $textColor || 'var(--white)'};;
+    background-color: transparent;
+    transition: 0.5s;
+    padding: 3px 18px;
+
+
+    span {
+    color: ${({ $textColor }) => $textColor || 'var(--grey)'};
+  }
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    color: ${({ $bgColor }) => $bgColor || 'var(--grey)'};
+  }
+`;
+
 
 export const Content = styled.div`
     width: 50%;

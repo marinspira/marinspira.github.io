@@ -19,7 +19,7 @@
 .sideBar {
     min-width: 230px;
     max-width: 266px;
-    border-right: 1px solid #454545c0;
+    border-right: 1px solid var(--grey-dark);
     padding: 20px;
     position: sticky;
     overflow-y: auto;

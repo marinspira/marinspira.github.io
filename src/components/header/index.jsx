@@ -25,8 +25,9 @@ function Header() {
     };
 
     const [isDark, setIsDark] = useState(() => {
-        return localStorage.getItem('theme') === 'dark';
-    });
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme ? savedTheme === 'dark' : true; 
+      });
 
     useEffect(() => {
         document.body.classList.toggle('dark-theme', isDark);
@@ -52,7 +53,7 @@ function Header() {
                 <C.Navbar menuOpen={menuOpen}>
                     {!isMobile && (
                         <div style={{ cursor: "pointer" }} onClick={() => setIsDark(prev => !prev)}>
-                            {isDark ? <IoMdSunny color='white' /> : <IoMdMoon color='black' />}
+                            {isDark ? <IoMdSunny size={20} color='white' /> : <IoMdMoon size={20} color='black' />}
                         </div>
                     )}
                     <li><a href='/#/blog'>Blog</a></li>
