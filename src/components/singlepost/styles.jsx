@@ -104,6 +104,16 @@ export const PostContent = styled.div`
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 992px) {
+    p {
+      font-size: 16px;
+    }
+  
+    li {
+      font-size: 16px !important;
+    }
   }
 `;
