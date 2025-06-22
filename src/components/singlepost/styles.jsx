@@ -27,7 +27,9 @@ export const MainContent = styled.div`
   width: 80%;
   padding-top: 10px;
   padding-left: 10px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
+  flex-direction: column;
+  display: flex;
 
   li {
     list-style-type: disc;
