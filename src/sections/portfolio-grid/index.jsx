@@ -55,6 +55,7 @@ function Portfolio() {
             device: "desk",
             textColor: "",
             textColor: "#fff",
+            imgUrl: "https://marinspira.github.io/static/media/feedz.5d90a4c6be1195980a6d.png"
         },
         {
             img: nhall,
@@ -70,6 +71,7 @@ function Portfolio() {
             bgColor: "var(--dark)",
             device: "desk",
             textColor: "var(--white)",
+            imgUrl: "https://marinspira.github.io/static/media/nhall.c52ab6bd8a5bbaddf223.png"
         },
         {
             img: feedzday,
@@ -84,6 +86,7 @@ function Portfolio() {
             bgColor: "var(--blue)",
             device: "desk",
             invert: true,
+            imgUrl: "https://marinspira.github.io/static/media/feedzday.eca862410869d00c23d7.png"
         },
         {
             img: brisa,
@@ -99,6 +102,7 @@ function Portfolio() {
             device: "desk",
             textColor: "#fff",
             invert: true,
+            imgUrl: "https://marinspira.github.io/static/media/brisa.7986473a7eb7b63cd2c3.jpg"
         },
         {
             img: priddat,
@@ -112,7 +116,8 @@ function Portfolio() {
             date: 'November, 2021',
             category: 'frontend',
             bgColor: "var(--purple)",
-            device: "desk"
+            device: "desk",
+            imgUrl: "https://marinspira.github.io/static/media/priddat.311afcba800a7eb8b7cb.jpeg"
         }
     ]
 
@@ -138,7 +143,9 @@ function Portfolio() {
                             {project.device === "desk" ? (
                                 <C.MockupWrapper>
                                     <C.MockupDesk src={mockup} alt={project.name} />
-                                    <C.MockupScreenshot src={project.img} alt={project.name} />
+                                    <a href={project.imgUrl} target="_blank">
+                                        <C.MockupScreenshot src={project.img} alt={project.name} />
+                                    </a>
                                 </C.MockupWrapper>
                                 // <C.MockupScreenshot2 src={project.img} alt={project.name} />
                             ) : project.device === "mobile" ? (
