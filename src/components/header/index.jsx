@@ -57,11 +57,11 @@ function Header() {
                         </div>
                     )}
                     <li><a href='/#/blog'>Blog</a></li>
-                    <li><HashLink to="/#about">About</HashLink></li>
                     <li><HashLink to="/#projects">Projects</HashLink></li>
+                    <li><HashLink to="/#about">About</HashLink></li>
                     <li><HashLink to="mailto:mariaferreira.developer@gmail.com">Contact</HashLink></li>
+                    <li><a href="https://drive.google.com/file/d/1dybROZTrO_tOiMAO-cE0s2HKIgc9qZqa/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
                     <li><a href="https://www.github.com/marinspira" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/iamaria" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 </C.Navbar>
             </C.Header>
             {/* </div> */}

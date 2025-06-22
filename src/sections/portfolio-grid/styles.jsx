@@ -153,6 +153,7 @@ export const PostCard = styled.div`
     @media screen and (max-width: 992px) {
         width: 100%;
         min-height: 500px;
+        padding: 30px;
     }
 `
 

@@ -67,6 +67,7 @@ export const Navbar = styled.ul`
         flex-direction: column;
         align-items: stretch;
         background-color: var(--white);
+        width: 100%;
     }}
 
     @media (max-width: 600px) {

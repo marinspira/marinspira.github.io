@@ -8,7 +8,7 @@
 
 :root {
   --grey: #f9f9f9;
-  --text: #6a717a;
+  --text: #4a4f56;
   --white: #fff;
   --dark: #2d2e32;
   --black: #000;
@@ -21,7 +21,7 @@
 
 .dark-theme {
   --grey: #111113;
-  --text: #b6b6b6;
+  --text: #c2c2c2;
   --white: #1b1b1d;
   --dark: #f9f9f9;
   --black: #fff;
@@ -73,11 +73,14 @@ blockquote {
   border-left: 4px solid #333;
   padding: 30px;
   margin: 20px 0;
-  font-size: 16px;
   font-family: monospace;
   max-width: "100%";
   overflow: auto;
   color: #fff;
+}
+
+blockquote span {
+  font-size: 14px !important;
 }
 
 code {

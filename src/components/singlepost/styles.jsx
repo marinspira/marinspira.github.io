@@ -9,6 +9,10 @@ export const Container = styled.div`
   gap: 30px;
   /* height: 100vh; */
   overflow-y: auto;
+
+  @media screen and (max-width: 778px) {
+    padding: 0px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -35,7 +39,7 @@ export const MainContent = styled.div`
   }
 
   ul {
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
   }
 
   img {
@@ -82,11 +86,20 @@ export const Sidebar = styled.div`
 export const PostTitle = styled.h1`
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
   font-size: 2.5em;
+
+  @media screen and (max-width: 778px) {
+    font-size: 2em;
+  }
 `;
 
 export const PostContent = styled.div`
   line-height: 1.6;
+
   h2, h3 {
     margin-top: 1.5rem;
+  }
+
+  p {
+    font-size: 16px;
   }
 `;
