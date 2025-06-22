@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import * as C from './styles';
 import { PostsContext } from '../../contexts/postsContext';
 import { HeaderVisibilityContext } from "../../contexts/headerVisibilityContext"
+import ScrollToTop from '../../utils/scrollToTop';
 
 function Post() {
     const { slug } = useParams();
@@ -83,6 +84,7 @@ function Post() {
 
     return (
         <C.Container ref={scrollRef}>
+            <ScrollToTop />
             <C.ContentWrapper>
                 <C.MainContent>
                     <C.PostTitle>{singlePost.title}</C.PostTitle>

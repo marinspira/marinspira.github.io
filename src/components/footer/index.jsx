@@ -4,7 +4,9 @@ import * as C from './styles'
 export default function Footer() {
   return (
     <C.Footer>
-        <p>© 2024</p>
+        <span>© 2024</span>
+        <p>Thank you for visiting my page.</p>
+        <p>📬  mariaferreira.developer@gmail.com</p>
     </C.Footer>
   )
 }
