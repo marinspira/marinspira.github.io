@@ -1,13 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0px 20px;
   max-width: 100%;
-  /* display: flex;
-  flex-direction: row; */
   margin: 0 auto;
   gap: 30px;
-  /* height: 100vh; */
   overflow-y: auto;
 
   @media screen and (max-width: 778px) {
@@ -26,11 +24,10 @@ export const ContentWrapper = styled.div`
 `;
 
 export const MainContent = styled.div`
-  /* flex: 3;
-  max-width: 80%; */
   width: 80%;
   padding-top: 10px;
   padding-left: 10px;
+  padding-bottom: 150px;
 
   li {
     list-style-type: disc;
@@ -87,6 +84,10 @@ export const Sidebar = styled.div`
   }
 `;
 
+export const LoadingContainer = styled.div`
+  padding: 20px;
+`
+
 export const PostTitle = styled.h1`
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
   font-size: 2.5em;
@@ -116,4 +117,40 @@ export const PostContent = styled.div`
       font-size: 16px !important;
     }
   }
+`;
+
+export const PostNavigation = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    justify-content: ${({ alignRight }) => (alignRight ? 'flex-end' : 'space-between')};
+    border-top: 1px solid var(--light-gray);
+    gap: 1rem;
+
+    @media screen and (max-width: 778px) {
+      flex-direction: column;
+    }
+`;
+
+export const NavButton = styled(Link)`
+    color: var(--text);
+    padding: 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--text);
+    width: 50%;
+
+    &:hover {
+        background-color: var(--primary-dark);
+    }
+
+    @media screen and (max-width: 778px) {
+      width: 100%;
+    }
 `;
