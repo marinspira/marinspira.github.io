@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import * as C from './styles'
 import { HashLink } from 'react-router-hash-link';
 import { FaBars } from 'react-icons/fa';
@@ -8,6 +8,8 @@ import { HeaderVisibilityContext } from '../../contexts/headerVisibilityContext'
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+    const navbarRef = useRef();
 
     useEffect(() => {
         const handleResize = () => {
@@ -19,6 +21,19 @@ function Header() {
     }, []);
 
     const { showHeader } = useContext(HeaderVisibilityContext);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuOpen && navbarRef.current && !navbarRef.current.contains(event.target)) {
+                setMenuOpen(false);
+            }
+        };
+    
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [menuOpen]);    
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -50,18 +65,18 @@ function Header() {
                     </C.MenuIcon>
                 </div>
 
-                <C.Navbar menuOpen={menuOpen}>
+                <C.Navbar ref={navbarRef} menuOpen={menuOpen}>
                     {!isMobile && (
                         <div style={{ cursor: "pointer" }} onClick={() => setIsDark(prev => !prev)}>
                             {isDark ? <IoMdSunny size={20} color='white' /> : <IoMdMoon size={20} color='black' />}
                         </div>
                     )}
-                    <li><a href='/#/blog'>Blog</a></li>
-                    <li><HashLink to="/#projects">Projects</HashLink></li>
-                    <li><HashLink to="/#about">About</HashLink></li>
-                    <li><HashLink to="mailto:mariaferreira.developer@gmail.com">Contact</HashLink></li>
-                    <li><a href="https://drive.google.com/file/d/1dybROZTrO_tOiMAO-cE0s2HKIgc9qZqa/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
-                    <li><a href="https://www.github.com/marinspira" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li onClick={() => setMenuOpen(false)}><a href='/#/blog'>Blog</a></li>
+                    <li onClick={() => setMenuOpen(false)}><HashLink to="/#projects">Projects</HashLink></li>
+                    <li onClick={() => setMenuOpen(false)}><HashLink to="/#about">About</HashLink></li>
+                    <li onClick={() => setMenuOpen(false)}><HashLink to="mailto:mariaferreira.developer@gmail.com">Contact</HashLink></li>
+                    <li onClick={() => setMenuOpen(false)}><a href="https://drive.google.com/file/d/1dybROZTrO_tOiMAO-cE0s2HKIgc9qZqa/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
+                    <li onClick={() => setMenuOpen(false)}><a href="https://www.github.com/marinspira" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 </C.Navbar>
             </C.Header>
             {/* </div> */}

@@ -49,7 +49,7 @@ export const Navbar = styled.ul`
     li a {
         font-weight: 600;
         cursor: pointer;
-        padding: 20px 10px;
+        padding: 20px;
         color: var(--black);
         width: 100%;
         font-size: 15px;

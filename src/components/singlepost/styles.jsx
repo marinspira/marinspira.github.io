@@ -19,6 +19,10 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 40px;
+  
+  @media screen {
+    padding: 10px;
+  }
 `;
 
 export const MainContent = styled.div`
