@@ -71,8 +71,7 @@ function Header() {
                             {isDark ? <IoMdSunny size={20} color='white' /> : <IoMdMoon size={20} color='black' />}
                         </div>
                     )}
-                    <li onClick={() => setMenuOpen(false)}><a href='/#/blog'>Blog</a></li>
-                    <li onClick={() => setMenuOpen(false)}><HashLink to="/#projects">Projects</HashLink></li>
+                    <li onClick={() => setMenuOpen(false)}><a href='https://medium.com/@mariaferreira.developer'>Blog</a></li>
                     <li onClick={() => setMenuOpen(false)}><HashLink to="/#about">About</HashLink></li>
                     <li onClick={() => setMenuOpen(false)}><HashLink to="mailto:mariaferreira.developer@gmail.com">Contact</HashLink></li>
                     <li onClick={() => setMenuOpen(false)}><a href="https://drive.google.com/file/d/1dybROZTrO_tOiMAO-cE0s2HKIgc9qZqa/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>

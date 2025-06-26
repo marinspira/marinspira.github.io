@@ -1,22 +1,16 @@
 import * as C from './styles'
-import feedz from '../../assets/feedz.png'
-import nhall from '../../assets/nhall.png'
-import feedzday from '../../assets/feedzday.png'
-import brisa from '../../assets/brisa.jpg'
+import feedz from '../../assets/feedz-cut.png'
+import nhall from '../../assets/nhall-cut.png'
+import feedzday from '../../assets/feedzday-cut.png'
+import brisa from '../../assets/brisa-cut.jpg'
 import novus from '../../assets/novus.jpeg'
 import mstore from '../../assets/mstore.jpeg'
 import dlifestyle from '../../assets/dlifestyle.jpeg'
 import hostelapp from '../../assets/hostelApp.png'
 import mockup from '../../assets/mockup.webp'
 import disonno from '../../assets/disonno.jpeg'
-import priddat from '../../assets/priddat.jpeg'
+import priddat from '../../assets/priddat-cut.jpeg'
 import go from '../../assets/go.gif'
-import expo from '../../assets/expo.gif'
-import Btn from '../../components/btn';
-import { PiHandWaving } from "react-icons/pi";
-import iphone from '../../assets/mockupIphone.png'
-import { useEffect, useRef, useState } from 'react'
-import { FaArrowRight } from "react-icons/fa6";
 
 function Portfolio() {
 
@@ -42,7 +36,7 @@ function Portfolio() {
             img: feedz,
             name: 'Website @Feedz',
             skills: ['nextjs,nodejs,typescript,bitbucket,figma,gcp'],
-            link: 'https://marinspira.github.io/#/blog/feedz-case-the-code-solution-that-changed-the-entire-marketing-strategy',
+            link: 'https://medium.com/@mariaferreira.developer/feedz-case-the-code-solution-that-changed-a-entire-marketing-strategy-fd3d6f523005',
             list: [
                 "🧩 <b>UI:</b> Figma, Next.js, TypeScript.",
                 "🔗 <b>APIs:</b> REST, Google Cloud Plataform.",
@@ -53,7 +47,6 @@ function Portfolio() {
             category: 'fullstack',
             bgColor: "var(--gray)",
             device: "desk",
-            textColor: "",
             textColor: "#fff",
             imgUrl: "https://marinspira.github.io/static/media/feedz.5d90a4c6be1195980a6d.png"
         },
