@@ -1,30 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.85e32388.css",
-    "main.js": "/static/js/main.d2ddaaf1.js",
+    "main.js": "/static/js/main.4adec052.js",
     "static/js/453.5fedddf5.chunk.js": "/static/js/453.5fedddf5.chunk.js",
-    "static/media/expo.gif": "/static/media/expo.907665b64df0632c1215.gif",
     "static/media/go.gif": "/static/media/go.3ef68cebf44292cc64ea.gif",
-    "static/media/nhall.png": "/static/media/nhall.c52ab6bd8a5bbaddf223.png",
-    "static/media/brisa.jpg": "/static/media/brisa.7986473a7eb7b63cd2c3.jpg",
-    "static/media/feedz.png": "/static/media/feedz.5d90a4c6be1195980a6d.png",
     "static/media/disonno.jpeg": "/static/media/disonno.3c010a298326d819cd8b.jpeg",
-    "static/media/feedzday.png": "/static/media/feedzday.eca862410869d00c23d7.png",
-    "static/media/priddat.jpeg": "/static/media/priddat.311afcba800a7eb8b7cb.jpeg",
     "static/media/mstore.jpeg": "/static/media/mstore.463d9c1a77b9305de719.jpeg",
     "static/media/me3.jpg": "/static/media/me3.22262a8ba49597e2114e.jpg",
+    "static/media/nhall-cut.png": "/static/media/nhall-cut.975b564103ec5170cefe.png",
     "static/media/hostelApp.png": "/static/media/hostelApp.ee689fd141e58cf5a796.png",
     "static/media/dlifestyle.jpeg": "/static/media/dlifestyle.49d8d8c2dc885d387f4d.jpeg",
     "static/media/novus.jpeg": "/static/media/novus.81248a7c5086899f4307.jpeg",
-    "static/media/mockupIphone.png": "/static/media/mockupIphone.6b574d7acd445fc36cee.png",
+    "static/media/brisa-cut.jpg": "/static/media/brisa-cut.205a248754a791e1b0eb.jpg",
+    "static/media/priddat-cut.jpeg": "/static/media/priddat-cut.451a241a2bb4013600b2.jpeg",
+    "static/media/feedz-cut.png": "/static/media/feedz-cut.2986880413e0c22dc330.png",
+    "static/media/feedzday-cut.png": "/static/media/feedzday-cut.1a2e288b6759fb8c1eae.png",
     "static/media/mockup.webp": "/static/media/mockup.786ab7155df34a9f62e8.webp",
     "index.html": "/index.html",
     "main.85e32388.css.map": "/static/css/main.85e32388.css.map",
-    "main.d2ddaaf1.js.map": "/static/js/main.d2ddaaf1.js.map",
+    "main.4adec052.js.map": "/static/js/main.4adec052.js.map",
     "453.5fedddf5.chunk.js.map": "/static/js/453.5fedddf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85e32388.css",
-    "static/js/main.d2ddaaf1.js"
+    "static/js/main.4adec052.js"
   ]
 }
