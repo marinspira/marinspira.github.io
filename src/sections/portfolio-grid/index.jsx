@@ -25,6 +25,7 @@ function Portfolio() {
                 "🔐 <b>Backend:</b> Express.js, MongoDB, WebSocket, Ngrok.",
                 "🚀 <b>CI/CD:</b> EAS, GitHub Actions, Google Play Console, Docker.",
             ],
+            link: 'https://medium.com/@mariaferreira.developer/case-hostelapp-how-i-built-a-fullstack-mobile-application-d2dbeee99234',
             date: "June, 2024",
             gif: true,
             device: "mobile",
