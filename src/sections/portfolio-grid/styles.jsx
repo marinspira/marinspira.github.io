@@ -22,6 +22,13 @@ export const MockupWrapper = styled.div`
     }
 `;
 
+export const Btns = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+`
+
 export const MobileWrapper = styled.div`
     display: flex;
 `

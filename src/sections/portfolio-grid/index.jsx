@@ -9,6 +9,7 @@ import dlifestyle from '../../assets/dlifestyle.jpeg'
 import hostelapp from '../../assets/hostelApp.png'
 import mockup from '../../assets/mockup.webp'
 import disonno from '../../assets/disonno.jpeg'
+import { FaGithub } from "react-icons/fa";
 import priddat from '../../assets/priddat-cut.jpeg'
 import go from '../../assets/go.gif'
 
@@ -25,19 +26,26 @@ function Portfolio() {
                 "🔐 <b>Backend:</b> Express.js, MongoDB, WebSocket, Ngrok.",
                 "🚀 <b>CI/CD:</b> EAS, GitHub Actions, Google Play Console, Docker.",
             ],
-            link: 'https://medium.com/@mariaferreira.developer/case-hostelapp-how-i-built-a-fullstack-mobile-application-d2dbeee99234',
+            link: {
+                url: 'https://medium.com/@mariaferreira.developer/case-hostelapp-how-i-built-a-fullstack-mobile-application-d2dbeee99234',
+                title: "Read case  →"
+            },
             date: "June, 2024",
             gif: true,
             device: "mobile",
             bgColor: "var(--purple)",
             textColor: "#fff",
             invert: true,
+            github: "https://github.com/marinspira/hostelapp-express"
         },
         {
             img: feedz,
             name: 'Website @Feedz',
             skills: ['nextjs,nodejs,typescript,bitbucket,figma,gcp'],
-            link: 'https://medium.com/@mariaferreira.developer/feedz-case-the-code-solution-that-changed-a-entire-marketing-strategy-fd3d6f523005',
+            link: {
+                url: 'https://medium.com/@mariaferreira.developer/feedz-case-the-code-solution-that-changed-a-entire-marketing-strategy-fd3d6f523005',
+                title: "Read case  →"
+            },
             list: [
                 "🧩 <b>UI:</b> Figma, Next.js, TypeScript.",
                 "🔗 <b>APIs:</b> REST, Google Cloud Plataform.",
@@ -49,7 +57,7 @@ function Portfolio() {
             bgColor: "var(--gray)",
             device: "desk",
             textColor: "#fff",
-            imgUrl: "https://marinspira.github.io/static/media/feedz.5d90a4c6be1195980a6d.png"
+            imgUrl: "https://raw.githubusercontent.com/marinspira/marinspira.github.io/refs/heads/main/src/assets/feedz.png"
         },
         {
             img: nhall,
@@ -65,7 +73,7 @@ function Portfolio() {
             bgColor: "var(--dark)",
             device: "desk",
             textColor: "var(--white)",
-            imgUrl: "https://marinspira.github.io/static/media/nhall.c52ab6bd8a5bbaddf223.png"
+            imgUrl: "https://raw.githubusercontent.com/marinspira/marinspira.github.io/refs/heads/main/src/assets/nhall.png"
         },
         {
             img: feedzday,
@@ -80,7 +88,7 @@ function Portfolio() {
             bgColor: "var(--blue)",
             device: "desk",
             invert: true,
-            imgUrl: "https://marinspira.github.io/static/media/feedzday.eca862410869d00c23d7.png"
+            imgUrl: "https://raw.githubusercontent.com/marinspira/marinspira.github.io/refs/heads/main/src/assets/feedzday.png"
         },
         {
             img: brisa,
@@ -96,7 +104,7 @@ function Portfolio() {
             device: "desk",
             textColor: "#fff",
             invert: true,
-            imgUrl: "https://marinspira.github.io/static/media/brisa.7986473a7eb7b63cd2c3.jpg"
+            imgUrl: "https://raw.githubusercontent.com/marinspira/marinspira.github.io/refs/heads/main/src/assets/brisa.jpg"
         },
         {
             img: priddat,
@@ -111,7 +119,7 @@ function Portfolio() {
             category: 'frontend',
             bgColor: "var(--purple)",
             device: "desk",
-            imgUrl: "https://marinspira.github.io/static/media/priddat.311afcba800a7eb8b7cb.jpeg"
+            imgUrl: "https://raw.githubusercontent.com/marinspira/marinspira.github.io/refs/heads/main/src/assets/priddat.jpeg"
         }
     ]
 
@@ -128,11 +136,18 @@ function Portfolio() {
                                         <li key={index}><span dangerouslySetInnerHTML={{ __html: item }} /></li>
                                     ))}
                                 </C.List>
-                                {project.link &&
-                                    <C.Button $textColor={project.textColor} $bgColor={project.bgColor} href={project.link}>
-                                        <span>Read case  →</span>
-                                    </C.Button>
-                                }
+                                <C.Btns>
+                                    {project.link &&
+                                        <C.Button $textColor={project.textColor} $bgColor={project.bgColor} href={project.link.url}>
+                                            <span>{project.link.title}</span>
+                                        </C.Button>
+                                    }
+                                    {project.github &&
+                                        <a target='_blank' href={project.github} alt="Github">
+                                            <FaGithub size={30} color='white'/>
+                                        </a>
+                                    }
+                                </C.Btns>
                             </C.Wrapper>
                             {project.device === "desk" ? (
                                 <C.MockupWrapper>
