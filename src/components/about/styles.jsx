@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-export const Section = styled.div`
+export const Section = styled.section`
   background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 `
 
 export const Container = styled.div`

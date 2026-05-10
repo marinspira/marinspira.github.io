@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/header";
+import Dock from "./components/dock";
 import Footer from "./components/footer";
 import { FaWhatsapp } from "react-icons/fa6";
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Outlet />
+      {/* <Dock /> */}
       {/* <a href="https://wa.me/34687741487?text=Hello%2C%20I%20visited%20your%20portfolio%20and%20I%27m%20interested%20in%20your%20work" className="whatsapp">
         <FaWhatsapp />
       </a> */}

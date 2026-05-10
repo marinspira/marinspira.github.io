@@ -22,6 +22,8 @@ export const HeaderMain = styled.header`
     justify-content: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: ${({ visible }) => (visible ? 1 : 0)};
+    pointer-events: ${({ visible }) => (visible ? 'auto' : 'none')};
+    transform: ${({ visible }) => (visible ? 'translateY(0)' : 'translateY(-12px)')};
     margin: 0 auto;
 `
 

@@ -5,6 +5,7 @@ export const Section = styled.section`
   min-height: 90vh;
   display: flex;
   align-items: center;
+  padding-top: 150px;
 `;
 
 export const MockupDesk = styled.img`
