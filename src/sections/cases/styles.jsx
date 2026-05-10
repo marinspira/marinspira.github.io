@@ -224,8 +224,8 @@ export const ContentInner = styled.div`
 
   h2 {
     color: var(--black);
-    font-size: clamp(34px, 4vw, 58px);
-    line-height: 1;
+    font-size: clamp(22px, 2.35vw, 34px);
+    line-height: 1.15;
     margin: 12px 0 24px;
   }
 
@@ -239,7 +239,7 @@ export const ContentInner = styled.div`
     padding: 56px 22px 72px;
 
     h2 {
-      font-size: 34px;
+      font-size: 24px;
     }
   }
 `;
@@ -254,11 +254,17 @@ export const Eyebrow = styled.span`
 
 export const MarkdownContent = styled.div`
   max-width: 650px;
+  overflow-x: auto;
 
   h3 {
     color: var(--black);
     font-size: 24px;
     margin: 48px 0 16px;
+  }
+
+  table + h3,
+  table + p + h3 {
+    margin-top: 76px;
   }
 
   p {
@@ -280,6 +286,43 @@ export const MarkdownContent = styled.div`
 
   a:not([data-media-anchor]) {
     font-weight: 700;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 0 28px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow: hidden;
+  }
+
+  thead {
+    display: none;
+  }
+
+  th,
+  td {
+    padding: 10px 12px;
+    border: 1px solid var(--grey-dark);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+  }
+
+  th {
+    color: var(--black);
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--grey-light);
+  }
+
+  @media (max-width: 800px) {
+    table {
+      min-width: 560px;
+    }
   }
 `;
 

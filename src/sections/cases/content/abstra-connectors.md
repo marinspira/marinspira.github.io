@@ -1,56 +1,55 @@
-Integrations look simple from a distance: a configuration screen, some credentials, an HTTP call, and a response. In practice, they sit on one of the most sensitive boundaries of a platform: authentication, certificates, scopes, client secrets, webhooks, credential expiration, token rotation, user experience for people without console access, and operational reliability when an integration stops working.
+Abstra is a **low-code platform** for building financial and operational workflows in **Python**, with **AI features** that help teams turn business processes into executable automations.
 
-[overview](#media-overview)
-
-In the Connectors feature at Abstra, I worked on a layer that turns external integrations into reusable project connections. The goal was to let users connect banks, ERPs, productivity tools, and public APIs without reimplementing authentication and request assembly every time they needed to use an API.
+In the Connectors feature, I worked on the **integration layer** that turns external APIs into reusable project connections. The goal was to let users connect banks, ERPs, CRMs, productivity tools, and public APIs without rebuilding **authentication**, **credential handling**, or **request assembly** every time a workflow needed to call an external system.
 
 At its core, the feature follows a simple user flow:
 
-- The user chooses a connector and fills in the required credentials once.
-- The system stores those credentials as the connector configuration for that project connection.
-- Every time an endpoint is called as an action, the connector reuses that saved configuration to authenticate, build the request, and execute the call.
+1. The user selects a connector and provides the required credentials once.
+2. The platform stores those credentials as the configuration for that project connection.
+3. Every time a workflow action calls an endpoint, the connector reuses the saved configuration to **authenticate**, build the request, and execute the call.
 
-On top of that core flow, I also added two operational improvements:
+My main responsibility was to expand the **connector catalog** according to customer needs, usually delivering around **3 to 5 connectors per week**. These connectors covered **banking APIs**, **ERP systems**, **CRM platforms**, productivity tools, legal systems, and **government services**.
 
-- A credential request flow, so someone on a team can ask the right person for credentials without exposing the whole project.
-- Certificate and credential expiration validation, with email notifications before a critical connection stops working.
+Examples of connectors I implemented or maintained:
 
-### The problem
+|  |  |  |
+| --- | --- | --- |
+| Banco do Brasil | Banrisul | Bradesco |
+| BS2 | Certta | ClickUp |
+| CNJ DJE | CNJ Datajud | Conta Simples | Data Rudder |
+| Dynamics Business | Google Docs | Google Sheets |
+| GRF-OFM | Itaú | LinkedIn |
+| Microsoft Outlook | Microsoft SharePoint | Microsoft Teams | Monday.com | MXM |
+| Nexxera | Omie | Projuris |
+| Santander | Serpro | Sicredi |
+| Siscom | Snowflake | Vindi |
 
-Abstra is a low-code platform for building business processes. With SmartChat, the goal was to let users describe operational work in natural language and have the AI execute the steps by calling the right integrations.
 
-A typical workflow could look like this: the AI opens the company's email inbox, finds supplier invoices, checks the invoice data, validates whether the payment is due, records the payable in the internal system, triggers a Pix payment through a banking connector, and then updates the process status once the payment is confirmed.
+## Improvements I added while owning the feature
 
-For that to work, the AI needed to know how to use integrations as tools. It could decide which connector action to call, pass the right parameters, and chain actions across systems.
+### **AI connector error analysis:** 
 
-That created a hard product and engineering requirement: integrations needed to be **reusable, secure, and easy to configure**. A user should be able to connect an external system once, save the credentials as a project connection, and let the AI reuse that connection every time it needed to execute an action.
+Implemented a **daily job** that audits recent integration errors from production projects, analyzes them with **AI**, and sends correction suggestions. 
 
-Connectors live on a difficult boundary. They need to be easy enough for end users to configure, but strict enough to handle production credentials. Banking APIs make the challenge sharper: many flows require digital certificates, private keys, application tokens, sandbox and production environments, specific headers, mTLS authentication, and calls across multiple API groups.
+For example, it can detect **`400` errors** caused by malformed parameters, **rate-limit failures** that require delays between requests, or recurring authentication issues that need credential review.
 
-Before this work, creating a connection often depended on the console user having every credential available. That is rarely true in companies. The person building the automation is often not the same person who has access to the bank portal, OAuth secret, certificate, or private key.
+### **Credential encryption:** 
 
-### The approach
+Implemented the **credential encryption and decryption flow** used before persisting sensitive connector data in the database.
 
-After I became responsible for this feature, most of my work centered around the connection entity. A connection has a name, connector type, project, author, configuration, and status. The status explicitly represents active connections and connections that are still waiting for credentials.
-
-The important part is that providers can implement their own requirements independently, which allows the platform to support OAuth connectors, token-based connectors, RSA and ECDSA key-based connectors, and mTLS connectors pre-configured.
-
-### Improvements I added while owning the feature
+The encryption key was managed through **AWS Secrets Manager**, and I validated that credentials could be encrypted, safely stored, decrypted, and reused without data loss. I also added tests to verify the full encryption/decryption lifecycle and prevent regressions in credential handling.
 
 [video](#video-credential-request)
+### **Credential request flow:** 
+Added a flow that allows a connection to exist before it is ready to execute. While a connection is **`pending_credentials`**, it appears in the project but cannot run actions. The builder can request credentials from the right person, and once that person submits valid credentials, the platform persists them, marks the request as completed, and activates the connection.
 
-- **Credential request flow:** this is an additional layer on top of the core connector flow. It allows a connection to exist before it is ready to use. While it is `pending_credentials`, it appears in the project but cannot execute actions. Once the invited person submits valid credentials, the credentials are persisted, the request is marked as completed, and the connection becomes `active`.
-- **Expiration layer:** for continuous operation, connectors that use certificates or expiring credentials declare how to extract the expiration date. An admin job walks the affected connections, computes the urgency level, and sends deduplicated emails using Redis.
-- **Why these improvements mattered:** these were not the base connector mechanism; they were improvements I added after paying attention to how the feature was used in real workflows. People often needed someone else to provide credentials, and certificate-based connectors needed proactive maintenance before they broke in production.
+### **Expiration prevent alerts:** 
+Added preventive validation for connectors that rely on **certificates** or **expiring credentials**. Providers declare how to extract expiration dates, and an admin job scans affected connections, computes urgency levels, and sends **deduplicated email alerts using Redis**.
 
-### Series posts
+## What this feature delivered
 
-- Connection Credentials Request: Unblocking Integrations Without Sharing Project Access.
-- Implementing Itaú Banking APIs.
-- Certificate And Credential Expiration Validation With Preventive Email Alerts.
+This work made integrations faster to create, safer to operate, and easier to reuse across workflows. Instead of hardcoding API logic or asking users to repeatedly configure the same authentication details, the platform stores **connector configuration** once and reuses it whenever an action needs to call an external endpoint.
 
-### What this feature delivered
+The **credential request** and **expiration alert** flows made the feature more practical for real companies, where the person building the automation is often not the person who owns **bank credentials**, **OAuth secrets**, **certificates**, or **private keys**.
 
-This work reduced friction in creating integrations by turning connector setup into a reusable configuration step. Users provide credentials once, the platform stores them as connection configuration, and actions can reuse that configuration every time they call an external endpoint.
-
-The additional credential request and expiration alert flows made the feature more practical in real companies, where the technical user may not own the secrets and where certificates or credentials can expire independently from the automation code.
+The **AI error analysis layer** also improved operational visibility by turning raw integration failures into actionable debugging suggestions, helping teams understand whether a failure came from **invalid payloads**, **expired credentials**, **rate limits**, or **provider-specific API behavior**.

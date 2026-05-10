@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { HeaderVisibilityContext } from "../../contexts/headerVisibilityContext";
 import { caseStudies } from "./cases";
 import * as C from "./styles";
@@ -243,6 +244,7 @@ function Cases({ caseStudy = caseStudies[0] }) {
 
                     <C.MarkdownContent>
                         <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
                             components={{
                                 a: ({ href, children }) => {
                                     const mediaAnchor = href?.replace(/^#(?:video|media)-/, "");

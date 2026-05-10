@@ -12,15 +12,15 @@ import connectorsMarkdown from "./content/abstra-connectors.md";
 
 export const caseStudies = [
     {
-        title: "Connectors @Abstra",
-        eyebrow: "Product Engineering",
+        title: "Connectors: secure reusable integration layer for authenticated banking, ERP, and CRM APIs",
+        eyebrow: "@Abstra",
         content: connectorsMarkdown,
         theme: {
             previewBackground: "#eb576a",
         },
         meta: [
             { label: "Role", value: "Fullstack" },
-            { label: "Stack", value: "React" },
+            { label: "Stack", value: "Node.js, Python" },
             { label: "Focus", value: "Integrations" },
             { label: "Year", value: "2025" },
         ],
@@ -46,8 +46,8 @@ export const caseStudies = [
         ],
     },
     {
-        title: "Website @Feedz",
-        eyebrow: "Fullstack",
+        title: "Next.js website with server-side API Routes integrating the Google Calendar REST API",
+        eyebrow: "@Feedz by TOTVS",
         content: feedzMarkdown,
         theme: {
             previewBackground: "#162e4c",
@@ -69,7 +69,7 @@ export const caseStudies = [
         ],
     },
     {
-        title: "Website FeedzDay",
+        title: "Event landing page with registration flows and campaign tracking @FeedzDay",
         eyebrow: "Frontend",
         content: feedzdayMarkdown,
         theme: {
@@ -92,7 +92,7 @@ export const caseStudies = [
         ],
     },
     {
-        title: "Landing page @Brisa Drinks",
+        title: "Lead capture landing page integrated with RD Station @Brisa Drinks",
         eyebrow: "Frontend",
         content: brisaMarkdown,
         theme: {
@@ -115,7 +115,7 @@ export const caseStudies = [
         ],
     },
     {
-        title: "E-commerce @GWS",
+        title: "Custom WooCommerce storefront with Next.js and Express backend @GWS",
         eyebrow: "Frontend",
         content: gwsMarkdown,
         theme: {
